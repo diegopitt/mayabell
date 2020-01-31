@@ -102,16 +102,13 @@ class Header extends Component {
           <div className={classes.grow} />
           <div className={classes.linksWrap}>
             <Link href="/habitaciones">
-              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Habitaciones </Button>
+              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Habitaciones</Button>
             </Link>
             <Link href="/restaurante">
               <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Restaurante</Button>
             </Link>
             <Link href="/relajacion">
               <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Relajacion</Button>
-            </Link>
-            <Link href="/contacto">
-              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Contacto</Button>
             </Link>
           </div>
         </Toolbar>
