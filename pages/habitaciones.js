@@ -420,7 +420,7 @@ class Index extends Component {
                     <Slider {...settings}>
                       <div>
                         <img
-                          src="./static/gallery/2.jpg"
+                          src="./static/gallery/0.jpg"
                           className={classes.img}
                           alt=""
                         />
@@ -469,7 +469,7 @@ class Index extends Component {
                     <Slider {...settings}>
                       <div>
                         <img
-                          src="./static/gallery/1.jpg"
+                          src="./static/gallery/01.jpg"
                           className={classes.img}
                           alt=""
                         />

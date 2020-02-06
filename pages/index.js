@@ -9,19 +9,10 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import GoogleMapReact from 'google-map-react'
 import Typography from '@material-ui/core/Typography'
+import IosArrowDropright from "react-ionicons/lib/IosArrowForward";
+import IosArrowDropleft from "react-ionicons/lib/IosArrowBack";
+import IconButton from "@material-ui/core/IconButton";
 
-const settings = {
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  dots: false,
-  draggable: false,
-  fade: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  waitForAnimate: true,
-};
 const styles = theme => ({
   wrapper: {
     margin: 0,
@@ -42,7 +33,7 @@ const styles = theme => ({
   img6: { backgroundImage: 'url(../static/gallery/61.jpg)' },
   img7: { backgroundImage: 'url(../static/gallery/7.jpg)' },
   img8: { backgroundImage: 'url(../static/gallery/8.jpg)' },
-  img9: { backgroundImage: 'url(../static/gallery/9.jpg)' },
+  img9: { backgroundImage: 'url(../static/gallery/007.jpg)' },
   img10: { backgroundImage: 'url(../static/gallery/10.jpg)' },
   img11: { backgroundImage: 'url(../static/gallery/11.jpg)' },
   img12: { backgroundImage: 'url(../static/gallery/12.jpg)' },
@@ -59,11 +50,50 @@ const styles = theme => ({
   img: {
     width:'100%'
   },
-  caption: {
+  captionwrapper:{
     position: 'absolute',
-    bottom: '50%',
-    right: '50%',
-    color: '#ffffff'
+    [theme.breakpoints.up('xs')]: {
+      bottom: '7%',
+    },
+    [theme.breakpoints.up('sm')]: {
+      bottom: '0%',
+    }
+  },
+  caption: { 
+    [theme.breakpoints.up('xs')]: {
+      fontSize: 20,
+      padding: theme.spacing(1, 2),
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 22,
+      padding: theme.spacing(1, 4),
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 24,
+      padding: theme.spacing(1, 6),
+    },
+    fontWeight: 300,
+    color: '#ffffff',
+    margin: theme.spacing(2, 0),
+    backgroundColor: "rgba(0,0,0,0.7)",
+  },
+  captionDuo: {
+    [theme.breakpoints.up('xs')]: {
+      fontSize: 20,
+      padding: theme.spacing(1, 2),
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 22,
+      padding: theme.spacing(1, 4),
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 24,
+      padding: theme.spacing(1, 6),
+    },
+    fontWeight: 300,
+    color: '#ffffff',
+    margin: theme.spacing(2, 0),
+    backgroundColor: "rgba(0,0,0,0.7)",
   },
   gridColor: {
     backgroundColor: '#ffffff'
@@ -127,7 +157,7 @@ const styles = theme => ({
     backgroundColor: '#23262d'
   },
   gridMapColor: {
-    backgroundColor: '#483119',
+    backgroundColor: '#76634b',
     [theme.breakpoints.up('xs')]: {
       padding: theme.spacing(1, 0),
     },
@@ -149,6 +179,24 @@ const styles = theme => ({
     width: '100%',
     border: '1px solid #f4f2db',
     height: '260px'
+  },
+  prev: {
+    padding: "0px",
+    margin: "0px",
+    opacity: 0.7,
+    position: "absolute",
+    top: "40%",
+    left: "5%",
+    zIndex: 1
+  },
+  next: {
+    padding: "0px",
+    margin: "0px",
+    opacity: 0.7,
+    position: "absolute",
+    top: "40%",
+    right: "5%",
+    zIndex: 1
   }
 });
 class Index extends Component {
@@ -166,6 +214,29 @@ class Index extends Component {
     this.setState({ mounted: true });
   }
   render() {
+    const ArrowLeft = props => (
+      <IconButton {...props} aria-label="prev" className={classes.prev}>
+        <IosArrowDropleft fontSize="52px" color="#ffffff" />
+      </IconButton>
+    );
+    const ArrowRight = props => (
+      <IconButton {...props} aria-label="next" className={classes.next}>
+        <IosArrowDropright fontSize="52px" color="#ffffff" />
+      </IconButton>
+    );
+    const settings = {
+      arrows: true,
+      infinite: true,
+      autoplay: false,
+      dots: false,
+      draggable: false,
+      fade: true,
+      speed: 1200,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: <ArrowLeft />,
+      nextArrow: <ArrowRight />
+    };
     const { classes } = this.props;
     const mapOptions = {
       zoomControl: false,
@@ -396,37 +467,26 @@ class Index extends Component {
             <div className={classes.wrapper}>
               <Carousel {...settings}>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img14)} />
-                </div>
-                <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img4)} />
-                </div>
-                <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img5)} />
-                </div>
-                <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img6)} />
-                </div>
-                <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img7)} />
-                </div>
-                <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img9)} />
-                </div>
-                <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img11)} />
-                </div>
-                <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img12)} />
                 </div>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img15)} />
+                  <div className={classNames(classes.image, classes.img14)} />
+                  <div className={classes.captionwrapper}>
+                    <div className={classes.caption}>Conectate con la naturaleza y fascinate de nuestro lugar</div>
+                  </div>
                 </div>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img16)} />
+                  <div className={classNames(classes.image, classes.img9)} />
+                  <div className={classes.captionwrapper}>
+                    <div className={classes.captionDuo}>Disfruta de nuestra Comida Regional.</div>
+                    <div className={classes.captionDuo}>Usamos ingredientes y recetas tradicionales</div>
+                  </div>
                 </div>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img17)} />
+                  <div className={classNames(classes.image, classes.img11)} />
+                  <div className={classes.captionwrapper}>
+                    <div className={classes.captionDuo}>Relajate en nuestros comodos ambientes</div>
+                  </div>
                 </div>
               </Carousel>
             </div>
@@ -474,7 +534,7 @@ class Index extends Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
               <Typography component="p" variant="h6" color='primary'>
-                EXPLORA LAS RUINAS
+              Explora Las Ruinas
               </Typography>
               <Typography component="p" variant="subtitle1" gutterBottom>
                 Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.
@@ -485,7 +545,7 @@ class Index extends Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
               <Typography component="p" variant="h6" color='primary'>
-                EXPLORA Agua Azul
+                Explora Agua Azul
               </Typography>
               <Typography component="p" variant="subtitle1" gutterBottom>
                 Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.

@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { withRouter  } from "next/router";
 import Layout from "../../../layout/Layout";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import { TextField, Button } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
+import { TextField, Button, Paper, Grid, Typography } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import classNames from "classnames";
 import GoogleMapReact from "google-map-react";
 const styles = theme => ({
   wrapper: {
     margin: 0,
     padding: 0,
-    paddingTop: "64px",
+    paddingTop: "56px",
     backgroundColor: "#f4f2db"
   },
   paper: {
