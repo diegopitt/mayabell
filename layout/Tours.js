@@ -32,6 +32,7 @@ const styles = theme => ({
   },
   eRuins:{
     display:'inline',
+    fontWeight:600,
     backgroundColor: "rgba(255,255,255,0.7)",
     padding:theme.spacing(1.5,5)
   },
