@@ -30,15 +30,17 @@ const styles = theme => ({
   },
   darkcolor: {
     color: "#453420",
+    letterSpacing: '0.1025em',
     opacity: 1,
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: 400,
     textTransform: "none"
   },
   lightcolor: {
     color: "#ffffff",
+    letterSpacing: '0.1025em',
     opacity: 1,
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: 300,
     textTransform: "none"
   },
@@ -162,6 +164,13 @@ class Header extends Component {
                 Relajacion
               </Button>
             </Link>
+            <Link href="/tours">
+              <Button
+                className={turnDarker ? classes.darkcolor : classes.lightcolor}
+              >
+                Tours
+              </Button>
+            </Link>
           </div>
           <div className={classes.menuWrap}>
             <IconButton
@@ -187,6 +196,9 @@ class Header extends Component {
               </Link>
               <Link href="/relajacion">
                 <MenuItem onClick={this.handleClose}>Relajacion</MenuItem>
+              </Link>
+              <Link href="/tours">
+                <MenuItem onClick={this.handleClose}>Tours</MenuItem>
               </Link>
             </Menu>
           </div>

@@ -17,6 +17,14 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <style jsx>{`
+          body{
+              font-family: 'Montserrat';
+              word-spacing: normal;
+              text-rendering: optimizeLegibility;
+              -webkit-font-smoothing: antialiased;
+          }
+      `}</style>
       </html>
     );
   }

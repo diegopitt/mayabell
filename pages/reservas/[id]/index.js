@@ -72,15 +72,15 @@ const styles = theme => ({
   Wrap: {
     width: "100%",
     border: "1px solid #f4f2db",
-    height: "260px"
+    height: "230px"
   },
   mapWrap: {
     backgroundColor: "#dfd2ae",
     [theme.breakpoints.up("xs")]: {
-      margin: theme.spacing(2, 0)
+      margin: theme.spacing(0, 0)
     },
     [theme.breakpoints.up("sm")]: {
-      margin: theme.spacing(4, 2)
+      margin: theme.spacing(1, 2)
     }
   },
   contactWrap: {

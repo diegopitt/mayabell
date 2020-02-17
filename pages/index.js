@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Carousel from "react-slick"
 import Layout from '../layout/Layout'
+import Footer from '../layout/Footer'
+import Tours from '../layout/Tours'
 import classNames from 'classnames';
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import GoogleMapReact from 'google-map-react'
 import Typography from '@material-ui/core/Typography'
 import IosArrowDropright from "react-ionicons/lib/IosArrowForward";
 import IosArrowDropleft from "react-ionicons/lib/IosArrowBack";
@@ -33,12 +34,12 @@ const styles = theme => ({
   img6: { backgroundImage: 'url(../static/gallery/61.jpg)' },
   img7: { backgroundImage: 'url(../static/gallery/7.jpg)' },
   img8: { backgroundImage: 'url(../static/gallery/8.jpg)' },
-  img9: { backgroundImage: 'url(../static/gallery/007.jpg)' },
+  img9: { backgroundImage: 'url(../static/gallery/03.jpg)' },
   img10: { backgroundImage: 'url(../static/gallery/10.jpg)' },
   img11: { backgroundImage: 'url(../static/gallery/11.jpg)' },
   img12: { backgroundImage: 'url(../static/gallery/12.jpg)' },
   img13: { backgroundImage: 'url(./static/gallery/13.jpg)' },
-  img14: { backgroundImage: 'url(./static/gallery/14.jpg)' },
+  img14: { backgroundImage: 'url(./static/gallery/010.jpg)' },
   img15: { backgroundImage: 'url(./static/gallery/15.jpg)' },
   img16: { backgroundImage: 'url(./static/gallery/16.jpg)' },
   img17: { backgroundImage: 'url(./static/gallery/17.jpg)' },
@@ -52,6 +53,7 @@ const styles = theme => ({
   },
   captionwrapper:{
     position: 'absolute',
+    letterSpacing: '0.1125em',
     [theme.breakpoints.up('xs')]: {
       bottom: '7%',
     },
@@ -61,7 +63,7 @@ const styles = theme => ({
   },
   caption: { 
     [theme.breakpoints.up('xs')]: {
-      fontSize: 20,
+      fontSize: 18,
       padding: theme.spacing(1, 2),
     },
     [theme.breakpoints.up('sm')]: {
@@ -69,11 +71,11 @@ const styles = theme => ({
       padding: theme.spacing(1, 4),
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 24,
+      fontSize: 32,
       padding: theme.spacing(1, 6),
     },
-    fontWeight: 300,
-    color: '#ffffff',
+    fontWeight: 400,
+    color: '#ede7cc',
     margin: theme.spacing(2, 0),
     backgroundColor: "rgba(0,0,0,0.7)",
   },
@@ -87,11 +89,11 @@ const styles = theme => ({
       padding: theme.spacing(1, 4),
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 24,
+      fontSize: 26,
       padding: theme.spacing(1, 6),
     },
-    fontWeight: 300,
-    color: '#ffffff',
+    fontWeight: 400,
+    color: '#ede7cc',
     margin: theme.spacing(2, 0),
     backgroundColor: "rgba(0,0,0,0.7)",
   },
@@ -104,12 +106,14 @@ const styles = theme => ({
   },
   paperBeige: {
     backgroundColor: '#f4f2db',
-    margin: theme.spacing(2),
     [theme.breakpoints.up('xs')]: {
-      padding: theme.spacing(2, 1),
+      padding: theme.spacing(5, 1),
     },
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(2, 2),
+      padding: theme.spacing(4, 1),
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(5, 2),
     }
   },
   paperDark: {
@@ -123,67 +127,38 @@ const styles = theme => ({
       padding: theme.spacing(4, 2),
     }
   },
-  mapWrap: {
-    backgroundColor: "#dfd2ae",
-    [theme.breakpoints.up("xs")]: {
-      margin: theme.spacing(2, 0)
-    },
-    [theme.breakpoints.up("sm")]: {
-      margin: theme.spacing(4, 2)
-    }
-  },
-  contactWrap: {
-    backgroundColor: "#dfd2ae",
-    [theme.breakpoints.up("xs")]: {
-      margin: theme.spacing(2, 2)
-    },
-    [theme.breakpoints.up("sm")]: {
-      margin: theme.spacing(4, 2)
-    }
-  },
   gridColorBeige: {
-    backgroundColor: '#f4f2db'
-  },
-  colorFooter: {
-    backgroundColor: '#dfd2ae',
+    backgroundColor: '#f4f2db',
     [theme.breakpoints.up('xs')]: {
-      padding: theme.spacing(1, 0),
+      padding: theme.spacing(4, 1),
     },
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(3, 0),
+      padding: theme.spacing(2, 1),
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(1, 1),
     }
   },
   gridColorDark: {
-    backgroundColor: '#23262d'
-  },
-  gridMapColor: {
-    backgroundColor: '#76634b',
+    backgroundColor: '#23262d',
     [theme.breakpoints.up('xs')]: {
-      padding: theme.spacing(1, 0),
+      padding: theme.spacing(4, 1),
     },
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(5, 0),
+      padding: theme.spacing(2, 1),
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(1, 1),
     }
   },
+
   map: {
     width: '100%'
-  },
-  bold: {
-    fontWeight: 500
-  },
-  italic: {
-    fontWeight: 400,
-    fontStyle: 'italic'
-  },
-  Wrap: {
-    width: '100%',
-    border: '1px solid #f4f2db',
-    height: '260px'
   },
   prev: {
     padding: "0px",
     margin: "0px",
-    opacity: 0.7,
+    opacity: 0.8,
     position: "absolute",
     top: "40%",
     left: "5%",
@@ -192,7 +167,7 @@ const styles = theme => ({
   next: {
     padding: "0px",
     margin: "0px",
-    opacity: 0.7,
+    opacity: 0.8,
     position: "absolute",
     top: "40%",
     right: "5%",
@@ -202,17 +177,9 @@ const styles = theme => ({
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      mounted: false,
-      center: {
-        lat: 17.488424,
-        lng: -92.036562
-      },
-    };
+    this.state = {};
   }
-  componentDidMount() {
-    this.setState({ mounted: true });
-  }
+
   render() {
     const ArrowLeft = props => (
       <IconButton {...props} aria-label="prev" className={classes.prev}>
@@ -238,228 +205,6 @@ class Index extends Component {
       nextArrow: <ArrowRight />
     };
     const { classes } = this.props;
-    const mapOptions = {
-      zoomControl: false,
-      mapTypeControl: false,
-      scaleControl: false,
-      streetViewControl: false,
-      rotateControl: false,
-      fullscreenControl: false,
-      styles: [{
-        "elementType": "geometry",
-        "stylers": [
-          {
-            "color": "#ebe3cd"
-          }
-        ]
-      },
-  {
-      "elementType": "labels.text",
-        "stylers": [
-          {
-            "visibility": "on"
-          }
-        ]
-    },
-    {
-      "featureType": "administrative",
-        "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#c9b2a6"
-            }
-          ]
-        },
-        //{ "featureType": "poi.business", stylers: [{ visibility: "off", }]},
-    {
-      "featureType": "administrative.land_parcel",
-        "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#dcd2be"
-            }
-          ]
-    },
-    {
-      "featureType": "administrative.land_parcel",
-        "elementType": "labels.text.fill",
-          "stylers": [
-            {
-              "color": "#ae9e90"
-            }
-          ]
-    },
-    {
-      "featureType": "landscape.natural",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#dfd2ae"
-            }
-          ]
-    },
-    {
-      "featureType": "poi",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#dfd2ae"
-            }
-          ]
-    },
-    {
-      "featureType": "poi",
-        "elementType": "labels.text.stroke",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-    },
-    {
-      "featureType": "poi.park",
-        "elementType": "geometry.fill",
-          "stylers": [
-            {
-              "color": "#a5b076"
-            }
-          ]
-    },
-    {
-      "featureType": "poi.park",
-        "elementType": "labels.text.fill",
-          "stylers": [
-            {
-              "color": "#447530"
-            }
-          ]
-    },
-    {
-      "featureType": "road",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#f5f1e6"
-            }
-          ]
-    },
-    {
-      "featureType": "road.arterial",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#fdfcf8"
-            }
-          ]
-    },
-    {
-      "featureType": "road.highway",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#f8c967"
-            }
-          ]
-    },
-    {
-      "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#e9bc62"
-            }
-          ]
-    },
-    {
-      "featureType": "road.highway.controlled_access",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#e98d58"
-            }
-          ]
-    },
-    {
-      "featureType": "road.highway.controlled_access",
-        "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#db8555"
-            }
-          ]
-    },
-    {
-      "featureType": "road.local",
-        "elementType": "labels.text.fill",
-          "stylers": [
-            {
-              "color": "#806b63"
-            }
-          ]
-    },
-    {
-      "featureType": "road.local",
-      "elementType": "labels.text.stroke",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-    {
-      "featureType": "transit.line",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#dfd2ae"
-            }
-          ]
-    },
-    {
-      "featureType": "transit.line",
-        "elementType": "labels.text.fill",
-          "stylers": [
-            {
-              "color": "#8f7d77"
-            }
-          ]
-    },
-    {
-      "featureType": "transit.line",
-        "elementType": "labels.text.stroke",
-          "stylers": [
-            {
-              "color": "#ebe3cd"
-            }
-          ]
-    },
-    {
-      "featureType": "transit.station",
-        "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#dfd2ae"
-            }
-          ]
-    },
-    {
-      "featureType": "water",
-        "elementType": "geometry.fill",
-          "stylers": [
-            {
-              "color": "#b9d3c2"
-            }
-          ]
-    },
-    {
-      "featureType": "water",
-        "elementType": "labels.text.fill",
-          "stylers": [
-            {
-              "color": "#92998d"
-            }
-          ]}
-      ]};
     return (
       <Layout extendedHeader={true}>
         <Grid container spacing={0}>
@@ -468,6 +213,9 @@ class Index extends Component {
               <Carousel {...settings}>
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img12)} />
+                  <div className={classes.captionwrapper}>
+                    <div className={classes.caption}>WELCOME TO MAYABELL HOTEL</div>
+                  </div>
                 </div>
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img14)} />
@@ -492,11 +240,11 @@ class Index extends Component {
             </div>
           </Grid>
         </Grid>
-        <Grid container spacing={8} className={classes.gridColorDark}>
-          <Grid item xs={12} md={8}>
+        <Grid container spacing={0} className={classes.gridColorDark}>
+          <Grid item xs={12}>
             <Paper className={classes.paperDark} elevation={0}>
               <Typography component="p" variant="h6" gutterBottom color='primary'>
-                HOTEL
+                HOTEL MAYABELL
               </Typography>
               <Typography component="p" variant="subtitle1" color="primary">
                 MAYABELL es un hotel y spa ubicado en Palenque, Chiapas. Ideal para consentirte en la alberca o jacuzzis, un agradable descanso en cualquiera de nuestras habitaciones de lujo, un masaje o buena comida en su restaurante exclusivo de comida internacional.
@@ -505,7 +253,7 @@ class Index extends Component {
           </Grid>
           <Grid item xs={12} md={4}></Grid>
         </Grid>
-        <Grid container spacing={2} className={classes.gridColorBeige}>
+        <Grid container spacing={0} className={classes.gridColorBeige}>
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
               <Typography component="p" variant="h6" color='primary'>
@@ -530,49 +278,8 @@ class Index extends Component {
             </Paper>
           </Grid>
         </Grid>
-        <Grid container spacing={0} className={classes.gridMapColor}>
-          <Grid item xs={12} md={6}>
-            <Paper className={classes.paperBeige} elevation={0}>
-              <Typography component="p" variant="h6" color='primary'>
-              Explora Las Ruinas
-              </Typography>
-              <Typography component="p" variant="subtitle1" gutterBottom>
-                Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.
-              </Typography>
-              <img src='./static/gallery/ruins1080.jpg' className={classes.img} alt="" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Paper className={classes.paperBeige} elevation={0}>
-              <Typography component="p" variant="h6" color='primary'>
-                Explora Agua Azul
-              </Typography>
-              <Typography component="p" variant="subtitle1" gutterBottom>
-                Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.
-              </Typography>
-              <img src='./static/gallery/aguaAzul.jpg' className={classes.img} alt="" />
-            </Paper>
-          </Grid>
-        </Grid>
-        <Grid container spacing={0} className={classes.colorFooter}>
-          <Grid item xs={12} md={3}>
-            <Paper className={classes.contactWrap} elevation={0}>
-              <Typography component="h2" variant="h6" gutterBottom color="secondary">CONTACTO</Typography>
-              <Typography component="p" className={classes.bold} variant="subtitle1">Carretera Ruinas KM 6 - Mayabell</Typography>
-              <Typography component="p" className={classes.italic} variant="subtitle1">A 500 Metros del sitio Arqueologico</Typography>
-              <Typography component="p" className={classes.bold} variant="subtitle1">Palenque, Chiapas</Typography>
-              <Typography component="p" className={classes.bold} variant="subtitle1">reservaciones@mayabell.mx</Typography>
-              <Typography component="p" className={classes.bold} variant="subtitle1">(916) 688-0013</Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Paper className={classes.mapWrap} elevation={0}>
-              <div className={classes.Wrap}>
-                {this.state.mounted > 0 && <GoogleMapReact options={mapOptions} bootstrapURLKeys={{ key: 'AIzaSyAjwT9l_e6OCw1h1s7YvvNJdGCOSAWL7nY' }} zoom={15} center={this.state.center}></GoogleMapReact>}
-              </div>
-            </Paper>
-          </Grid>
-        </Grid>
+        <Tours />
+        <Footer />
       </Layout>
     )
   };
