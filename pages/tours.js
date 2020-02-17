@@ -1,74 +1,131 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import Layout from '../layout/Layout'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-import Slider from "react-slick"
-import classNames from 'classnames'
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import Layout from "../layout/Layout";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 const styles = theme => ({
-  wrapper: {
-    margin: 0,
-    padding: 0,
-    background: '#23262d',
+  root: {
+    display: 'flex',
+    backgroundColor: "#f4f2db",
   },
-  gridColor: {
-    backgroundColor: '#ffffff'
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
   },
-  paper: {
-    margin: theme.spacing(2),
-    padding: theme.spacing(6, 2),
-    backgroundColor: 'transparent',
-
+  content: {
+    flex: '1 0 auto',
   },
-  paperBeige: {
-    backgroundColor: '#f4f2db',
-    margin: theme.spacing(2),
-    padding: theme.spacing(8, 2),
-  },
-  paperDark: {
-    backgroundColor: '#190f1b',
-    margin: theme.spacing(6, 2),
-    padding: theme.spacing(6, 2),
-  },
-  gridColorBeige: {
-    backgroundColor: '#f4f2db'
+  cover: {
+    width: 640,
   },
   gridColorDark: {
-    backgroundColor: '#23262d'
+    paddingTop: '68px',
+    backgroundColor: "#190f1b",
+  },
+  gridColorBeige: {
+    backgroundColor: "#f4f2db",
+    [theme.breakpoints.up("xs")]: {
+      padding: theme.spacing(1, 1)
+    },
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(1, 1)
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing(1, 1)
+    }
+  },
+  paperDark: {
+    background: "rgba(0, 0, 0, 0.6)",
+    [theme.breakpoints.up("xs")]: {
+      padding: theme.spacing(2, 2),
+      margin: theme.spacing(4, 2)
+    },
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(2, 2),
+      margin: theme.spacing(4, 2)
+    }
   },
 });
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      nav1: null,
-      nav2: null
-    };
+    this.state = {};
   }
-  componentDidMount() {
-    this.setState({
-      nav1: this.slider1,
-      nav2: this.slider2
-    });
-  }
+  componentDidMount() {}
   render() {
     const { classes } = this.props;
-    const settings = { centerMode: true };
     return (
       <Layout extendedHeader={false}>
-        <br />
-        <br />
-        <Grid container spacing={10} className={classes.gridColorBeige}>
-          <Grid item xs={12} md={6}>
-
-          </Grid>
-          <Grid item xs={12} md={6}>
-
+        <Grid container spacing={0} className={classes.gridColorDark}>
+          <Grid item xs={12} md={8}>
+            <Paper className={classes.paperDark} elevation={0}>
+              <Typography component="p" variant="h6" color="primary">
+                MAYABELL TOURS
+              </Typography>
+              <Typography component="p" variant="subtitle1" color="primary">
+                Let us know when you will be arriving and what kind of room
+                you would like to book. Make a reservation request now, pay
+                when you arrive.
+              </Typography>
+            </Paper>
           </Grid>
         </Grid>
+        <Grid container spacing={0} className={classes.gridColorBeige}>
+          <Grid item xs={12} md={6}>
+            <Card className={classes.root} elevation={0}>
+            <CardMedia className={classes.cover} image="../static/gallery/ruins1080.jpg" title="Explora las Ruinas" />
+              <div className={classes.details}>
+                <CardContent className={classes.content}>
+                  <Typography component="p" variant="h6" color='secondary'>
+                  Explora Las Ruinas
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                  Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.
+                  </Typography>
+                </CardContent>
+              </div>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+          <Card className={classes.root} elevation={0}>
+            <CardMedia className={classes.cover} image="../static/gallery/aguaAzul.jpg" title="Explora las Ruinas" />
+              <div className={classes.details}>
+                <CardContent className={classes.content}>
+                  <Typography component="p" variant="h6" color='secondary'>
+                  Explora Agua Azul
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                  Agua Azul are a series of waterfalls found on the Xanil River in the southern state 68 kilometres from Mayabell
+                  </Typography>
+                </CardContent>
+              </div>
+            </Card>
+          </Grid>
+        </Grid>
+        <Grid container spacing={0} className={classes.gridColorBeige}>
+          <Grid item xs={12} md={6}>
+            <Card className={classes.root} elevation={0}>
+            <CardMedia className={classes.cover} image="../static/gallery/misolha.jpg" title="Explora las Ruinas" />
+              <div className={classes.details}>
+                <CardContent className={classes.content}>
+                  <Typography component="p" variant="h6" color='secondary'>
+                  Explora Misol Há
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                  Misol-Há is a waterfall located in the Municipality of Salto de Agua, 25 kilometers from Mayabell
+                  </Typography>
+                </CardContent>
+              </div>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}></Grid>
+        </Grid>
       </Layout>
-    )
-  };
+    );
+  }
 }
-export default withStyles(styles)(Index)
+export default withStyles(styles)(Index);
