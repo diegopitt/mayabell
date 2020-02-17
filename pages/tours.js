@@ -49,6 +49,10 @@ const styles = theme => ({
       margin: theme.spacing(4, 2)
     }
   },
+  title:{
+    fontSize:16,
+    fontWeight: 600
+  }
 });
 class Index extends Component {
   constructor(props) {
@@ -80,7 +84,7 @@ class Index extends Component {
             <CardMedia className={classes.cover} image="../static/gallery/ruins1080.jpg" title="Explora las Ruinas" />
               <div className={classes.details}>
                 <CardContent className={classes.content}>
-                  <Typography component="p" variant="h6" color='secondary'>
+                  <Typography component="p" className={classes.title} color='secondary'>
                   Explora Las Ruinas
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary">
@@ -95,7 +99,7 @@ class Index extends Component {
             <CardMedia className={classes.cover} image="../static/gallery/aguaAzul.jpg" title="Explora las Ruinas" />
               <div className={classes.details}>
                 <CardContent className={classes.content}>
-                  <Typography component="p" variant="h6" color='secondary'>
+                  <Typography component="p" className={classes.title} color='secondary'>
                   Explora Agua Azul
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary">
@@ -112,7 +116,7 @@ class Index extends Component {
             <CardMedia className={classes.cover} image="../static/gallery/misolha.jpg" title="Explora las Ruinas" />
               <div className={classes.details}>
                 <CardContent className={classes.content}>
-                  <Typography component="p" variant="h6" color='secondary'>
+                  <Typography component="p" className={classes.title} color='secondary'>
                   Explora Misol Há
                   </Typography>
                   <Typography variant="subtitle1" color="textSecondary">
