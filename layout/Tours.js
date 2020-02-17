@@ -78,7 +78,7 @@ class Tours extends Component {
       <Grid container spacing={0} className={classes.gridMapColor}>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paperRuins} elevation={4}>
-            <Typography component="p" variant="subtitle" color='secondary' className={classes.eRuins}>
+            <Typography component="p" variant="subtitle1" color='secondary' className={classes.eRuins}>
             Explora Las Ruinas
             </Typography>
             <Link href="/tours">
@@ -91,7 +91,7 @@ class Tours extends Component {
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paperWaterfall} elevation={4}>
-            <Typography component="p" variant="subtitle" color='secondary' className={classes.eRuins}>
+            <Typography component="p" variant="subtitle1" color='secondary' className={classes.eRuins}>
               Explora Agua Azul
             </Typography>
             <Link href="/tours">
