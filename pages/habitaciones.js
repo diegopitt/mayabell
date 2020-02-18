@@ -36,7 +36,7 @@ const styles = theme => ({
       minWidth: '100%',
       maxWidth: '',
       margin: 0,
-      marginBottom:8,
+      marginBottom: 24,
       width: '100%',
     },
     [theme.breakpoints.up("sm")]: {
