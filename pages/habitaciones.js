@@ -33,8 +33,9 @@ const styles = theme => ({
   },
   card: {
     [theme.breakpoints.up("xs")]: {
-      minWidth: "320px",
-      maxWidth: "320px"
+      minWidth: '100%',
+      maxWidth: '',
+      width: '100%',
     },
     [theme.breakpoints.up("sm")]: {
       minWidth: "320px",
