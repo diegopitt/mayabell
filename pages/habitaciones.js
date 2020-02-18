@@ -35,17 +35,19 @@ const styles = theme => ({
     [theme.breakpoints.up("xs")]: {
       minWidth: '100%',
       maxWidth: '',
+      margin: 0,
       width: '100%',
     },
     [theme.breakpoints.up("sm")]: {
       minWidth: "320px",
-      maxWidth: "340px"
+      margin: 8,
+      maxWidth: "340px",
     },
     [theme.breakpoints.up("md")]: {
       minWidth: "310px",
-      maxWidth: "330px"
+      maxWidth: "330px",
+      margin: 8,
     },
-    margin: 8,
     backgroundColor: "#faf9ee",
     transition: "all .25s linear",
     boShadow: "0px 1px 2px 0px ",
