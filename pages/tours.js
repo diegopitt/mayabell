@@ -78,9 +78,9 @@ class Index extends Component {
             </Paper>
           </Grid>
         </Grid>
-        <Grid container spacing={0} className={classes.gridColorBeige}>
+        <Grid container spacing={2} className={classes.gridColorBeige}>
           <Grid item xs={12} md={6}>
-            <Card className={classes.root} elevation={0}>
+            <Card className={classes.root} elevation={2}>
             <CardMedia className={classes.cover} image="../static/gallery/ruins1080.jpg" title="Explora las Ruinas" />
               <div className={classes.details}>
                 <CardContent className={classes.content}>
@@ -95,8 +95,8 @@ class Index extends Component {
             </Card>
           </Grid>
           <Grid item xs={12} md={6}>
-          <Card className={classes.root} elevation={0}>
-            <CardMedia className={classes.cover} image="../static/gallery/aguaAzul.jpg" title="Explora las Ruinas" />
+          <Card className={classes.root} elevation={2}>
+            <CardMedia className={classes.cover} image="../static/gallery/aguaAzul.jpg" title="Explora Agua Azul" />
               <div className={classes.details}>
                 <CardContent className={classes.content}>
                   <Typography component="p" className={classes.title} color='secondary'>
@@ -110,10 +110,10 @@ class Index extends Component {
             </Card>
           </Grid>
         </Grid>
-        <Grid container spacing={0} className={classes.gridColorBeige}>
+        <Grid container spacing={2} className={classes.gridColorBeige}>
           <Grid item xs={12} md={6}>
-            <Card className={classes.root} elevation={0}>
-            <CardMedia className={classes.cover} image="../static/gallery/misolha.jpg" title="Explora las Ruinas" />
+            <Card className={classes.root} elevation={2}>
+            <CardMedia className={classes.cover} image="../static/gallery/misolha.jpg" title="Explora misol ha" />
               <div className={classes.details}>
                 <CardContent className={classes.content}>
                   <Typography component="p" className={classes.title} color='secondary'>
@@ -126,7 +126,9 @@ class Index extends Component {
               </div>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6}></Grid>
+          <Grid item xs={12} md={6}>
+            
+          </Grid>
         </Grid>
       </Layout>
     );
