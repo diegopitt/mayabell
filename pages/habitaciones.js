@@ -33,21 +33,21 @@ const styles = theme => ({
   },
   card: {
     [theme.breakpoints.up("xs")]: {
-      minWidth: '100%',
-      maxWidth: '',
+      minWidth: "100%",
+      maxWidth: "",
       margin: 0,
       marginBottom: 24,
-      width: '100%',
+      width: "100%"
     },
     [theme.breakpoints.up("sm")]: {
       minWidth: "320px",
       margin: 8,
-      maxWidth: "340px",
+      maxWidth: "340px"
     },
     [theme.breakpoints.up("md")]: {
       minWidth: "310px",
       maxWidth: "330px",
-      margin: 8,
+      margin: 8
     },
     backgroundColor: "#faf9ee",
     transition: "all .25s linear",
@@ -56,18 +56,8 @@ const styles = theme => ({
       boxShadow: "-1px 11px 20px 0px rgba(160, 125, 45, 0.8)"
     }
   },
-
   media: {
     height: 180
-  },
-  image: {
-    backgroundColor: "rgba(0, 0, 0, 0)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-    width: "100%",
-    height: "100%",
-    opacity: 1
   },
   img1: { backgroundImage: "url(./static/gallery/11.jpg)" },
   img2: { backgroundImage: "url(./static/gallery/10.jpg)" },
@@ -75,35 +65,14 @@ const styles = theme => ({
   img4: { backgroundImage: "url(./static/gallery/8.jpg)" },
   img5: { backgroundImage: "url(./static/gallery/7.jpg)" },
   img6: { backgroundImage: "url(./static/gallery/61.jpg)" },
-  imgwrapper: {
-    position: "relative",
-    height: "340px"
-  },
-  thumbwrapper: {
-    position: "relative",
-    height: "60px"
-  },
-  paper: {
-    margin: theme.spacing(2),
-    padding: theme.spacing(6, 2),
-    backgroundColor: "transparent"
-  },
   GridList: {
     margin: theme.spacing(2),
     padding: theme.spacing(6, 2)
-  },
-  paperBeige: {
-    backgroundColor: "#f4f2db",
-    margin: theme.spacing(2),
-    padding: theme.spacing(8, 2)
   },
   paperDark: {
     backgroundColor: "#190f1b",
     margin: theme.spacing(6, 2),
     padding: theme.spacing(6, 2)
-  },
-  gridColorBeige: {
-    backgroundColor: "#f4f2db"
   },
   gridColorDark: {
     backgroundColor: "#23262d"
@@ -134,17 +103,9 @@ const styles = theme => ({
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      nav1: null,
-      nav2: null
-    };
+    this.state = {};
   }
-  componentDidMount() {
-    this.setState({
-      nav1: this.slider1,
-      nav2: this.slider2
-    });
-  }
+
   render() {
     const { classes } = this.props;
     const ArrowLeft = props => (
@@ -178,47 +139,26 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img
-                          src="./static/gallery/14.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/3.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/4.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/2.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Bungalow Familiar
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                    <Typography gutterBottom variant="h5" component="h2">Bungalow Familiar</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/1">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -226,48 +166,27 @@ class Index extends Component {
                 <CardActionArea>
                   <div className={classes.media}>
                     <Slider {...settings}>
-                      <div>
-                        <img
-                          src="./static/gallery/4.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                    <div>
+                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/7.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/9.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/2.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Habitacion Privada
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                  <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/2">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -275,48 +194,27 @@ class Index extends Component {
                 <CardActionArea>
                   <div className={classes.media}>
                     <Slider {...settings}>
-                      <div>
-                        <img
-                          src="./static/gallery/1.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                    <div>
+                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/7.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/16.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/7.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Habitacion Privada
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/3">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -324,48 +222,27 @@ class Index extends Component {
                 <CardActionArea>
                   <div className={classes.media}>
                     <Slider {...settings}>
-                      <div>
-                        <img
-                          src="./static/gallery/7.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                    <div>
+                        <img src="./static/gallery/7.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/10.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/10.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/11.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/18.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Habitacion Privada
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/4">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -374,47 +251,26 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img
-                          src="./static/gallery/4.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/2.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/3.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/8.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Bungalow Familiar
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/5">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -423,25 +279,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img
-                          src="./static/gallery/0.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/0.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/15.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/15.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/18.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/18.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -449,21 +293,14 @@ class Index extends Component {
                     <Typography gutterBottom variant="h5" component="h2">
                       Habitacion Privada
                     </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/6">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                  <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -472,47 +309,26 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img
-                          src="./static/gallery/01.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/1.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/12.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/12.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img
-                          src="./static/gallery/8.jpg"
-                          className={classes.img}
-                          alt=""
-                        />
+                        <img src="./static/gallery/8.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Habitacion Privada
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Casa completa que consta de 2 habitaciones c/u con baño
-                      completo, sala, comedor, cocina, terraza y 1/2 baño
+                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
                   <Link href="/reservas/7">
-                    <Button size="small" color="primary">
-                      Hacer Reservacion
-                    </Button>
+                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>
@@ -522,12 +338,7 @@ class Index extends Component {
         <Grid container spacing={10} className={classes.gridColorDark}>
           <Grid item xs={12} md={8}>
             <Paper className={classes.paperDark} elevation={0}>
-              <Typography
-                component="h2"
-                variant="h6"
-                gutterBottom
-                color="primary"
-              >
+              <Typography component="h2" variant="h6" gutterBottom color="primary">
                 HOTEL
               </Typography>
               <Typography component="p" variant="subtitle1" color="primary">
@@ -540,57 +351,6 @@ class Index extends Component {
             </Paper>
           </Grid>
           <Grid item xs={12} md={4}></Grid>
-        </Grid>
-        <Grid container spacing={10} className={classes.gridColorBeige}>
-          <Grid item xs={12} md={6}>
-            <Paper className={classes.paperBeige} elevation={0}>
-              <Typography
-                component="h2"
-                variant="h6"
-                gutterBottom
-                color="primary"
-              >
-                SPA
-              </Typography>
-              <Typography component="p" variant="subtitle1">
-                Aquí la tranquilidad prevalece, ideal para que su estancia sea
-                una experiencia rejuvenecedora. hidromasajes, faciales,
-                corporales, terapias y Reiki son sólo algunos de los servicios
-                que ofrecemos.
-                <br />
-                <br />
-              </Typography>
-              <img
-                src="./static/gallery/11.jpg"
-                className={classes.img}
-                alt="logo"
-              />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Paper className={classes.paperBeige} elevation={0}>
-              <Typography
-                component="h2"
-                variant="h6"
-                gutterBottom
-                color="primary"
-              >
-                Alberca
-              </Typography>
-              <Typography component="p" variant="subtitle1">
-                Tomar el sol, convivir con los seres queridos y disfrutar de un
-                buen atardecer es de los grandes placeres de la estancia.
-                <br />
-                <br />
-                <br />
-              </Typography>
-              <img
-                src="./static/gallery/5.jpg"
-                className={classes.img}
-                alt="logo"
-              />
-            </Paper>
-          </Grid>
         </Grid>
       </Layout>
     );

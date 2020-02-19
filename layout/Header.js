@@ -53,9 +53,6 @@ const styles = theme => ({
     alignItems: "center",
     zIndex: 1
   },
-  title: {
-    flexGrow: 1
-  },
   linksWrap: {
     //whiteSpace: 'nowrap',
     [theme.breakpoints.up('xs')]: {
@@ -104,7 +101,6 @@ class Header extends Component {
   handleClick = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
-
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
@@ -118,76 +114,35 @@ class Header extends Component {
       this.flagDarker = newFlagDarker;
     }
   };
-
   render() {
     const { classes, extendedHeader } = this.props;
     const { turnDarker, anchorEl } = this.state;
     return (
-      <AppBar
-        className={classNames(
-          extendedHeader ? classes.appBar : classes.darker,
-          extendedHeader && turnDarker && classes.darker
-        )}
-      >
+      <AppBar className={classNames( extendedHeader ? classes.appBar : classes.darker, extendedHeader && turnDarker && classes.darker)}>
         <Toolbar>
           <Link href="/">
-            <img
-              src={
-                turnDarker
-                  ? "../static/images/logo3.png"
-                  : "../static/images/logo2.png"
-              }
-              className={turnDarker ? classes.logo : classes.logosmall}
-              alt="logo"
-            />
+            <img src={ turnDarker ? "../static/images/logo3.png" : "../static/images/logo2.png" } className={turnDarker ? classes.logo : classes.logosmall} alt="logo" />
           </Link>
           <div className={classes.grow} />
           <div className={classes.linksWrap}>
             <Link href="/habitaciones">
-              <Button
-                className={turnDarker ? classes.darkcolor : classes.lightcolor}
-              >
-                Habitaciones
-              </Button>
+              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Habitaciones</Button>
             </Link>
             <Link href="/restaurante">
-              <Button
-                className={turnDarker ? classes.darkcolor : classes.lightcolor}
-              >
-                Restaurante
-              </Button>
+              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Restaurante</Button>
             </Link>
             <Link href="/relajacion">
-              <Button
-                className={turnDarker ? classes.darkcolor : classes.lightcolor}
-              >
-                Relajacion
-              </Button>
+              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Relajacion</Button>
             </Link>
             <Link href="/tours">
-              <Button
-                className={turnDarker ? classes.darkcolor : classes.lightcolor}
-              >
-                Tours
-              </Button>
+              <Button className={turnDarker ? classes.darkcolor : classes.lightcolor}>Tours</Button>
             </Link>
           </div>
           <div className={classes.menuWrap}>
-            <IconButton
-              aria-controls="simple-menu"
-              aria-haspopup="true"
-              onClick={this.handleClick}
-              size="small"
-            >
+            <IconButton aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick} size="small">
               <IosAppsOutline color={turnDarker ? '#483119' : '#FFFFFF'} fontSize="30px" />
             </IconButton>
-            <Menu
-              id="simple-menu"
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={this.handleClose}
-            >
+            <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={this.handleClose}>
               <Link href="/habitaciones">
                 <MenuItem onClick={this.handleClose}>Habitaciones</MenuItem>
               </Link>

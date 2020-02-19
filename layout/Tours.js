@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const styles = theme => ({
   gridMapColor: {
-    backgroundColor: '#76634b',
+    backgroundColor: '#23262d',
     [theme.breakpoints.up('xs')]: {
       padding: theme.spacing(5, 1),
     },
@@ -16,7 +16,7 @@ const styles = theme => ({
       padding: theme.spacing(4, 1),
     },
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(5, 1),
+      padding: theme.spacing(6, 1),
     }
   },
   paperRuins:{
@@ -40,9 +40,10 @@ const styles = theme => ({
     lineHeight: 1.4,
     margin: theme.spacing(1,2),
     fontWeight: 300,
+    fontSize:13,
     color: '#dfd2ae',
     fontStyle: 'italic',
-    paddingBottom:'24px'
+    paddingBottom:'24px',
   },
   paperWaterfall:{
     position: 'relative',
