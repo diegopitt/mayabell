@@ -139,7 +139,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/3.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
@@ -167,7 +167,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/01.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
@@ -195,7 +195,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/1.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
@@ -223,7 +223,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/7.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/002.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/10.jpg" className={classes.img} alt="" />
@@ -251,7 +251,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/2.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/7.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
@@ -279,7 +279,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/0.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/010.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/15.jpg" className={classes.img} alt="" />
@@ -309,7 +309,7 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/1.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/11.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
                         <img src="./static/gallery/12.jpg" className={classes.img} alt="" />

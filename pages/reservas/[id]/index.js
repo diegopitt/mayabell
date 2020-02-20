@@ -6,7 +6,10 @@ import { TextField, Button, Paper, Grid, Typography } from "@material-ui/core"
 import Card from "@material-ui/core/Card"
 import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
-import GoogleMapReact from "google-map-react"
+import format from 'date-fns/format'
+import DateFnsUtils from '@date-io/date-fns'
+import getISOWeek from 'date-fns/getISOWeek'
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers'
 import Footer from '../../../layout/Footer'
 const styles = theme => ({
   wrapper: {
@@ -57,6 +60,15 @@ const styles = theme => ({
       width: "76%"
     }
   },
+  dateP: {
+    // margin: '22px 4px 0px 4px'
+    [theme.breakpoints.up("xs")]: {
+      width: "100%"
+    },
+    [theme.breakpoints.up("sm")]: {
+      width: "76%"
+    }
+  },
   card: {
     display: "flex",
     [theme.breakpoints.up("xs")]: {
@@ -89,6 +101,8 @@ class Index extends Component {
     super(props);
     this.state = {
       mounted: false,
+      checkout: null,
+      checkin: null,
       center: {
         lat: 17.488424,
         lng: -92.036562
@@ -98,8 +112,21 @@ class Index extends Component {
   componentDidMount() {
     this.setState({ mounted: true });
   }
+  handleTemplateDate = (date) => {
+    // const newState = { ...this.state };
+    // const sdate = format(date, 'MM/dd/yyyy')
+    // newState.values['checkin'] = sdate;
+    // this.setState(newState);
+  };
+  handleCheckout = (date) => {
+    // const newState = { ...this.state };
+    // const sdate = format(date, 'MM/dd/yyyy')
+    // newState.values['checkout'] = sdate;
+    // this.setState(newState);
+  };
   render() {
     const { classes } = this.props;
+    const { checkin, checkout } = this.state;
     const id = this.props.router.query.id;
     let  img = ''
     let title = ''
@@ -184,37 +211,35 @@ class Index extends Component {
           <Grid container spacing={0} className={classes.containerWrap}>
             <Grid align="center" item xs={12} md={6}>
               <Paper className={classes.paper} elevation={0}>
-                <TextField
-                  label="Numero de adultos"
-                  className={classes.textField}
-                />
+                <TextField type="number" label="Numero de adultos" className={classes.textField} />
               </Paper>
             </Grid>
             <Grid align="center" item xs={12} md={6}>
               <Paper className={classes.paper} elevation={0}>
-                <TextField
-                  label="Numero de Ninos (menos de 12)"
-                  className={classes.textField}
-                />
+                <TextField type="number" label="Numero de Ninos (menos de 12)" className={classes.textField} />
               </Paper>
             </Grid>
           </Grid>
           <Grid container spacing={0} className={classes.containerWrap}>
             <Grid align="center" item xs={12} md={6}>
               <Paper className={classes.paper} elevation={0}>
-                <TextField label="Check-in" className={classes.textField} />
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <KeyboardDatePicker disablePast className={classes.dateP} disableToolbar variant="inline" margin="normal" label="Check-In" id="date-picker-inline" value={checkin} onChange={this.handleTemplateDate} KeyboardButtonProps={{ 'aria-label': 'change date', }} />
+                </MuiPickersUtilsProvider>
               </Paper>
             </Grid>
             <Grid align="center" item xs={12} md={6}>
               <Paper className={classes.paper} elevation={0}>
-                <TextField label="Check-out" className={classes.textField} />
+              <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                    <KeyboardDatePicker disablePast className={classes.dateP} disableToolbar variant="inline" margin="normal" label="Check-Out" id="date-picker-inline" value={checkout} onChange={this.handleCheckout} KeyboardButtonProps={{ 'aria-label': 'change date', }} />
+                </MuiPickersUtilsProvider>
               </Paper>
             </Grid>
           </Grid>
           <Grid container spacing={0} className={classes.containerWrap}>
             <Grid align="center" item xs={12} md={6}>
               <Paper className={classes.paper} elevation={0}>
-                <TextField label="Mensaje" className={classes.textField} />
+                <TextField label="Mensaje" multiline rowsMax="4" className={classes.textField} />
               </Paper>
             </Grid>
             <Grid align="center" item xs={12} md={6}>
