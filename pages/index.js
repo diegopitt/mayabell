@@ -71,7 +71,7 @@ const styles = theme => ({
       padding: theme.spacing(1, 4),
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 32,
+      fontSize: 36,
       padding: theme.spacing(1, 6),
     },
     fontWeight: 400,
@@ -89,7 +89,7 @@ const styles = theme => ({
       padding: theme.spacing(1, 4),
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 26,
+      fontSize: 36,
       padding: theme.spacing(1, 6),
     },
     fontWeight: 400,
