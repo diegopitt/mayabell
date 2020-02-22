@@ -274,7 +274,7 @@ class Index extends Component {
               </Typography>
               <Typography component="p" variant="subtitle1" gutterBottom>
                 Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
-                <br /><br /><br />
+                <br /><br />
               </Typography>
               <img src='./static/gallery/5.jpg' className={classes.img} alt="" />
             </Paper>
