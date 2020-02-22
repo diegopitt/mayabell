@@ -151,7 +151,9 @@ const styles = theme => ({
       padding: theme.spacing(1, 1),
     }
   },
-
+  lS:{
+    //letterSpacing: '0.1025em',
+  },
   map: {
     width: '100%'
   },
@@ -243,10 +245,10 @@ class Index extends Component {
         <Grid container spacing={0} className={classes.gridColorDark}>
           <Grid item xs={12}>
             <Paper className={classes.paperDark} elevation={0}>
-              <Typography component="p" variant="h6" gutterBottom color='primary'>
+              <Typography component="p" variant="h5" gutterBottom color='primary'>
                 HOTEL MAYABELL
               </Typography>
-              <Typography component="p" variant="subtitle1" color="primary">
+              <Typography component="p" variant="subtitle1" color="primary" className={classes.lS}>
                 MAYABELL es un hotel y spa ubicado en Palenque, Chiapas. Ideal para consentirte en la alberca o jacuzzis, un agradable descanso en cualquiera de nuestras habitaciones de lujo, un masaje o buena comida en su restaurante exclusivo de comida internacional.
               </Typography>
             </Paper>
@@ -256,7 +258,7 @@ class Index extends Component {
         <Grid container spacing={0} className={classes.gridColorBeige}>
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
-              <Typography component="p" variant="h6" color='primary'>
+              <Typography component="p" variant="h5" color='primary'>
                 SPA
               </Typography>
               <Typography component="p" gutterBottom variant="subtitle1">
@@ -267,12 +269,12 @@ class Index extends Component {
           </Grid>
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
-              <Typography component="p" variant="h6" color='primary'>
+              <Typography component="p" variant="h5" color='primary'>
                 Alberca
               </Typography>
               <Typography component="p" variant="subtitle1" gutterBottom>
                 Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
-                <br /><br />
+                <br /><br /><br />
               </Typography>
               <img src='./static/gallery/5.jpg' className={classes.img} alt="" />
             </Paper>
