@@ -5,7 +5,10 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
     allVariants: {
-      letterSpacing: '0.079em'
+      letterSpacing: '0.0635em',
+      fontWeight:500,
+      textRendering:'optimizeLegibility',
+      lineHeight: 1.5
     },
     fontFamily: [
       '"Montserrat"',
@@ -28,6 +31,14 @@ const theme = createMuiTheme({
       default: '#fff',
     },
   },
+  overrides: {
+    MuiTypography: {
+      h4: {
+        fontWeight: 600,
+        fontSize:24
+      }
+    }
+  }
 });
 
 export default theme;
