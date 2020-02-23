@@ -63,7 +63,7 @@ const styles = theme => ({
   },
   caption: { 
     [theme.breakpoints.up('xs')]: {
-      fontSize: 18,
+      fontSize: 17,
       padding: theme.spacing(1, 2),
     },
     [theme.breakpoints.up('sm')]: {
@@ -81,7 +81,7 @@ const styles = theme => ({
   },
   captionDuo: {
     [theme.breakpoints.up('xs')]: {
-      fontSize: 20,
+      fontSize: 18,
       padding: theme.spacing(1, 2),
     },
     [theme.breakpoints.up('sm')]: {
@@ -222,20 +222,20 @@ class Index extends Component {
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img14)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.caption}>Conectate con la naturaleza y fascinate de nuestro lugar</div>
+                    <div className={classes.caption}>CONECTATE CON LA NATURALEZA Y FASCINANTE DE NUESTRO LUGAR</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img9)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.captionDuo}>Disfruta de nuestra Comida Regional.</div>
-                    <div className={classes.captionDuo}>Usamos ingredientes y recetas tradicionales</div>
+                    <div className={classes.captionDuo}>DISFRUTA DE NUESTRA COMIDA REGIONAL</div>
+                    <div className={classes.captionDuo}>USAMOS INGREDIENTES Y RECETAS TRADICIONALES</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img11)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.captionDuo}>Relajate en nuestros comodos ambientes</div>
+                    <div className={classes.captionDuo}>RELAJATE EN NUESTROS COMODOS HAMBIENTES</div>
                   </div>
                 </div>
               </Carousel>
