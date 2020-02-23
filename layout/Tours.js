@@ -28,7 +28,8 @@ const styles = theme => ({
     margin: theme.spacing(2),
     padding: 0,
     minHeight:316,
-    paddingTop:'8px'
+    paddingTop:'10px',
+    overflow:'hidden',
   },
   eRuins:{
     display:'inline',
@@ -53,7 +54,8 @@ const styles = theme => ({
     backgroundPosition: 'center center',
     margin: theme.spacing(2),
     padding: 0,
-    paddingTop:'8px',
+    paddingTop:'10px',
+    overflow:'hidden',
     minHeight:316
   },
   tourBtns:{

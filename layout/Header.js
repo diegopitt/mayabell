@@ -30,15 +30,13 @@ const styles = theme => ({
   },
   darkcolor: {
     color: "#453420",
-    letterSpacing: '0.1025em',
     opacity: 1,
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: 400,
     textTransform: "none"
   },
   lightcolor: {
     color: "#ffffff",
-    letterSpacing: '0.1025em',
     opacity: 1,
     fontSize: 14,
     fontWeight: 400,
