@@ -150,7 +150,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">Bungalow Familiar</Typography>
+                    <Typography gutterBottom variant="subtitle2" component="h2">Bungalow Familiar</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
@@ -178,7 +178,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                  <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
                   <Typography variant="body2" color="textSecondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
@@ -206,7 +206,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
@@ -234,7 +234,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
@@ -262,7 +262,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
@@ -290,7 +290,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="subtitle2" component="h2">
                       Habitacion Privada
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
@@ -320,7 +320,7 @@ class Index extends Component {
                     </Slider>
                   </div>
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
