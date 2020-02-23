@@ -30,10 +30,9 @@ const styles = theme => ({
     }
   },
   bold: {
-    fontWeight: 500
+    fontWeight: 600
   },
   italic: {
-    fontWeight: 400,
     fontStyle: "italic"
   },
   mapWrap: {
@@ -291,11 +290,11 @@ class Footer extends Component {
         <Grid item xs={12} md={3}>
           <Paper className={classes.contactWrap} elevation={0}>
             <Typography component="h2" variant="h6" gutterBottom color="secondary">CONTACTO</Typography>
-            <Typography component="p" className={classes.bold} variant="subtitle1">Carretera Ruinas KM 6 - Mayabell</Typography>
-            <Typography component="p" className={classes.italic} variant="subtitle1">A 500 Metros del sitio Arqueologico</Typography>
-            <Typography component="p" className={classes.bold} variant="subtitle1">Palenque, Chiapas</Typography>
-            <Typography component="p" className={classes.bold} variant="subtitle1">reservaciones@mayabell.mx</Typography>
-            <Typography component="p" className={classes.bold} variant="subtitle1">(916) 688-0013</Typography>
+            <Typography component="p" className={classes.bold} variant="body1">Carretera Ruinas KM 6 - Mayabell</Typography>
+            <Typography component="p" className={classes.italic} variant="body2">A 500 Metros del sitio Arqueologico</Typography>
+            <Typography component="p" className={classes.bold} variant="body1">Palenque, Chiapas</Typography>
+            <Typography component="p" className={classes.bold} variant="body1">reservaciones@mayabell.mx</Typography>
+            <Typography component="p" className={classes.bold} variant="body1">(916) 688-0013</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} md={9}>

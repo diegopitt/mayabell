@@ -18,7 +18,7 @@ const styles = theme => ({
     border: "0",
     padding: "1.625rem 0",
     width: "100%",
-    transition: "all 400ms ease 0s"
+    transition: "all 800ms ease 0s"
   },
   darker: {
     opacity: 1,
@@ -41,7 +41,7 @@ const styles = theme => ({
     letterSpacing: '0.1025em',
     opacity: 1,
     fontSize: 14,
-    fontWeight: 300,
+    fontWeight: 400,
     textTransform: "none"
   },
   menuWrap: {
