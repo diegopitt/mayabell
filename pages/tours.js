@@ -97,7 +97,6 @@ const styles = theme => ({
     background: 'rgba(0, 0, 0, 0.5)',
     display: 'flex',
     alignItems: 'center',
-    letterSpacing: '1px',
   },
   subtitle: {
     fontSize: theme.typography.pxToRem(12),
