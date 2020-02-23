@@ -258,7 +258,7 @@ class Index extends Component {
         <Grid container spacing={0} className={classes.gridColorBeige}>
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
-              <Typography component="p" variant="h4" color='primary'>
+              <Typography component="p" variant="h4" color='primary' gutterBottom>
                 SPA
               </Typography>
               <Typography component="p" gutterBottom variant="subtitle1">
@@ -269,7 +269,7 @@ class Index extends Component {
           </Grid>
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={0}>
-              <Typography component="p" variant="h4" color='primary'>
+              <Typography component="p" variant="h4" color='primary' gutterBottom>
                 Alberca
               </Typography>
               <Typography component="p" variant="subtitle1" gutterBottom>
