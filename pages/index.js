@@ -261,8 +261,8 @@ class Index extends Component {
               <Typography component="p" variant="h4" color='primary'>
                 SPA
               </Typography>
-              <Typography component="p" gutterBottom variant="body2">
-                Aquí la tranquilidad prevalece, ideal para que su estancia sea una experiencia rejuvenecedora. hidromasajes, faciales, corporales, terapias y Reiki son sólo algunos de los servicios que ofrecemos.
+              <Typography component="p" gutterBottom variant="subtitle1">
+                Aquí la tranquilidad prevalece, ideal para que su estancia sea una experiencia rejuvenecedora. hidromasajes, faciales, corporales, terapias y Reiki.
               </Typography>
               <img src='./static/gallery/11.jpg' className={classes.img} alt="" />
             </Paper>
@@ -272,7 +272,7 @@ class Index extends Component {
               <Typography component="p" variant="h4" color='primary'>
                 Alberca
               </Typography>
-              <Typography component="p" variant="body2" gutterBottom>
+              <Typography component="p" variant="subtitle1" gutterBottom>
                 Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
                 <br /><br />
               </Typography>
