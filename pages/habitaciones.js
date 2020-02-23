@@ -135,7 +135,7 @@ class Index extends Component {
           <Grid item xs={12}>
             <GridList cellHeight="auto" className={classes.GridList}>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
@@ -163,7 +163,7 @@ class Index extends Component {
                 </CardActions>
               </Card>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
@@ -191,7 +191,7 @@ class Index extends Component {
                 </CardActions>
               </Card>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
@@ -219,7 +219,7 @@ class Index extends Component {
                 </CardActions>
               </Card>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
@@ -247,7 +247,7 @@ class Index extends Component {
                 </CardActions>
               </Card>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
@@ -275,7 +275,7 @@ class Index extends Component {
                 </CardActions>
               </Card>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
@@ -305,7 +305,7 @@ class Index extends Component {
                 </CardActions>
               </Card>
               <Card className={classes.card}>
-                <CardActionArea>
+                <CardActionArea disableRipple>
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
