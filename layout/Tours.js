@@ -25,7 +25,15 @@ const styles = theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
-    margin: theme.spacing(2),
+    [theme.breakpoints.up('xs')]: {
+      margin: theme.spacing(2, 1),
+    },
+    [theme.breakpoints.up('sm')]: {
+      margin: theme.spacing(2, 1),
+    },
+    [theme.breakpoints.up('md')]: {
+      margin: theme.spacing(2, 2),
+    },
     padding: 0,
     minHeight:316,
     paddingTop:'10px',
@@ -52,7 +60,15 @@ const styles = theme => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
-    margin: theme.spacing(2),
+    [theme.breakpoints.up('xs')]: {
+      margin: theme.spacing(2, 1),
+    },
+    [theme.breakpoints.up('sm')]: {
+      margin: theme.spacing(2, 1),
+    },
+    [theme.breakpoints.up('md')]: {
+      margin: theme.spacing(2, 2),
+    },
     padding: 0,
     paddingTop:'10px',
     overflow:'hidden',
