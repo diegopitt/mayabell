@@ -300,7 +300,7 @@ class Footer extends Component {
         <Grid item xs={12} md={9}>
           <Paper className={classes.mapWrap} elevation={0}>
             <div className={classes.Wrap}>
-              {this.state.mounted > 0 && <GoogleMapReact options={mapOptions} bootstrapURLKeys={{ key: 'AIzaSyAjwT9l_e6OCw1h1s7YvvNJdGCOSAWL7nY' }} zoom={15} center={this.state.center}></GoogleMapReact>}
+              {this.state.mounted > 0 && <GoogleMapReact options={mapOptions} bootstrapURLKeys={{ key: 'AIzaSyBZMHeui6QHt3JXnzgFCLVolXN0JaTiNWA' }} zoom={15} center={this.state.center}></GoogleMapReact>}
             </div>
           </Paper>
         </Grid>
