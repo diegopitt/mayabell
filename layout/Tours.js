@@ -21,7 +21,7 @@ const styles = theme => ({
   },
   paperRuins:{
     position: 'relative',
-    backgroundImage: 'url(../static/gallery/ruins1080.jpg)',
+    backgroundImage: 'url(../static/gallery/ruins.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
@@ -89,7 +89,7 @@ class Tours extends Component {
               <Button variant="contained" className={classes.tourBtns}>Ver Tours</Button>
             </Link>
           </Paper>
-          <Typography component="div" variant="subtitle1" className={classes.ruinsCaptions}>
+          <Typography component="div" variant="body2" className={classes.ruinsCaptions}>
             Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.
           </Typography>
         </Grid>
@@ -102,7 +102,7 @@ class Tours extends Component {
               <Button variant="contained" className={classes.tourBtns}>Ver Tours</Button>
             </Link>
           </Paper>
-          <Typography component="div" variant="subtitle1" className={classes.ruinsCaptions}>
+          <Typography component="div" variant="body2" className={classes.ruinsCaptions}>
           Agua Azul are a series of waterfalls found on the Xanil River in the southern state 68 kilometres from Mayabell
           </Typography>
         </Grid>

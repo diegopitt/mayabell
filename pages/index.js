@@ -29,21 +29,10 @@ const styles = theme => ({
     height: '100%',
     opacity: 1,
   },
-  img4: { backgroundImage: 'url(../static/gallery/4.jpg)' },
-  img5: { backgroundImage: 'url(../static/gallery/51.jpg)' },
-  img6: { backgroundImage: 'url(../static/gallery/61.jpg)' },
-  img7: { backgroundImage: 'url(../static/gallery/7.jpg)' },
-  img8: { backgroundImage: 'url(../static/gallery/8.jpg)' },
-  img9: { backgroundImage: 'url(../static/gallery/03.jpg)' },
-  img10: { backgroundImage: 'url(../static/gallery/10.jpg)' },
-  img11: { backgroundImage: 'url(../static/gallery/11.jpg)' },
-  img12: { backgroundImage: 'url(../static/gallery/12.jpg)' },
-  img13: { backgroundImage: 'url(./static/gallery/13.jpg)' },
-  img14: { backgroundImage: 'url(./static/gallery/010.jpg)' },
-  img15: { backgroundImage: 'url(./static/gallery/15.jpg)' },
-  img16: { backgroundImage: 'url(./static/gallery/16.jpg)' },
-  img17: { backgroundImage: 'url(./static/gallery/17.jpg)' },
-  img18: { backgroundImage: 'url(./static/gallery/18.jpg)' },
+  img1: { backgroundImage: 'url(../static/gallery/pool/p7.jpg)' },
+  img2: { backgroundImage: 'url(../static/gallery/rooms/10.jpg)' },
+  img3: { backgroundImage: 'url(../static/gallery/restaurant/r1.jpg)' },
+  img4: { backgroundImage: 'url(../static/gallery/rooms/11.jpg)' },
   imgwrapper: {
     position: 'relative',
     height: '100vh',
@@ -71,7 +60,7 @@ const styles = theme => ({
       padding: theme.spacing(1, 4),
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 36,
+      fontSize: 28,
       padding: theme.spacing(1, 6),
     },
     fontWeight: 400,
@@ -89,7 +78,7 @@ const styles = theme => ({
       padding: theme.spacing(1, 4),
     },
     [theme.breakpoints.up('sm')]: {
-      fontSize: 36,
+      fontSize: 28,
       padding: theme.spacing(1, 6),
     },
     fontWeight: 400,
@@ -183,12 +172,12 @@ class Index extends Component {
   }
 
   render() {
-    const ArrowLeft = props => (
+    const ArrowLeft = ({ currentSlide, slideCount, ...props }) => (
       <IconButton {...props} aria-label="prev" className={classes.prev}>
         <IosArrowDropleft fontSize="52px" color="#ffffff" />
       </IconButton>
     );
-    const ArrowRight = props => (
+    const ArrowRight = ({ currentSlide, slideCount, ...props }) => (
       <IconButton {...props} aria-label="next" className={classes.next}>
         <IosArrowDropright fontSize="52px" color="#ffffff" />
       </IconButton>
@@ -214,28 +203,28 @@ class Index extends Component {
             <div className={classes.wrapper}>
               <Carousel {...settings}>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img12)} />
+                  <div className={classNames(classes.image, classes.img1)} />
                   <div className={classes.captionwrapper}>
                     <div className={classes.caption}>WELCOME TO MAYABELL HOTEL</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img14)} />
+                  <div className={classNames(classes.image, classes.img2)} />
                   <div className={classes.captionwrapper}>
                     <div className={classes.caption}>CONECTATE CON LA NATURALEZA Y FASCINANTE DE NUESTRO LUGAR</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img9)} />
+                  <div className={classNames(classes.image, classes.img3)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.captionDuo}>DISFRUTA DE NUESTRA COMIDA REGIONAL</div>
+                    <div className={classes.captionDuo}>DISFRUTA DE NUESTRA COCINA INTERNACIONAL</div>
                     <div className={classes.captionDuo}>USAMOS INGREDIENTES Y RECETAS TRADICIONALES</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
-                  <div className={classNames(classes.image, classes.img11)} />
+                  <div className={classNames(classes.image, classes.img4)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.captionDuo}>RELAJATE EN NUESTROS COMODOS HAMBIENTES</div>
+                    <div className={classes.caption}>RELAJATE EN NUESTROS COMODOS HAMBIENTES</div>
                   </div>
                 </div>
               </Carousel>
@@ -248,7 +237,7 @@ class Index extends Component {
               <Typography component="p" variant="h5" gutterBottom color='primary'>
                 HOTEL MAYABELL
               </Typography>
-              <Typography component="p" variant="subtitle1" color="primary" className={classes.lS}>
+              <Typography component="p" variant="body2" color="primary" className={classes.lS}>
                 MAYABELL es un hotel y spa ubicado en Palenque, Chiapas. Ideal para consentirte en la alberca o jacuzzis, un agradable descanso en cualquiera de nuestras habitaciones de lujo, un masaje o buena comida en su restaurante exclusivo de comida internacional.
               </Typography>
             </Paper>
@@ -261,10 +250,10 @@ class Index extends Component {
               <Typography component="p" variant="h4" color='primary' gutterBottom>
                 SPA
               </Typography>
-              <Typography component="p" gutterBottom variant="subtitle1">
+              <Typography component="p" gutterBottom variant="body2">
                 Aquí la tranquilidad prevalece, ideal para que su estancia sea una experiencia rejuvenecedora. hidromasajes, faciales, corporales, terapias y Reiki.
               </Typography>
-              <img src='./static/gallery/11.jpg' className={classes.img} alt="" />
+              <img src='./static/gallery/rooms/11.jpg' className={classes.img} alt="" />
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -272,11 +261,11 @@ class Index extends Component {
               <Typography component="p" variant="h4" color='primary' gutterBottom>
                 Alberca
               </Typography>
-              <Typography component="p" variant="subtitle1" gutterBottom>
+              <Typography component="p" variant="body2" gutterBottom>
                 Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
                 <br /><br />
               </Typography>
-              <img src='./static/gallery/5.jpg' className={classes.img} alt="" />
+              <img src='./static/gallery/pool/p8.jpg' className={classes.img} alt="" />
             </Paper>
           </Grid>
         </Grid>

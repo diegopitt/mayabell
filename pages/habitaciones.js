@@ -59,12 +59,12 @@ const styles = theme => ({
   media: {
     height: 180
   },
-  img1: { backgroundImage: "url(./static/gallery/11.jpg)" },
-  img2: { backgroundImage: "url(./static/gallery/10.jpg)" },
-  img3: { backgroundImage: "url(./static/gallery/9.jpg)" },
-  img4: { backgroundImage: "url(./static/gallery/8.jpg)" },
-  img5: { backgroundImage: "url(./static/gallery/7.jpg)" },
-  img6: { backgroundImage: "url(./static/gallery/61.jpg)" },
+  img1: { backgroundImage: "url(./static/gallery/rooms/11.jpg)" },
+  img2: { backgroundImage: "url(./static/gallery/rooms/10.jpg)" },
+  img3: { backgroundImage: "url(./static/gallery/rooms/9.jpg)" },
+  img4: { backgroundImage: "url(./static/gallery/rooms/8.jpg)" },
+  img5: { backgroundImage: "url(./static/gallery/rooms/7.jpg)" },
+  img6: { backgroundImage: "url(./static/gallery/rooms/6.jpg)" },
   GridList: {
     margin: theme.spacing(2),
     padding: theme.spacing(6, 2)
@@ -139,13 +139,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/7.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/8.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/9.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -167,13 +167,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/01.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/6.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/2.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/4.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -195,13 +195,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/1.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/1.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/7.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/7.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -223,13 +223,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/002.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/15.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/10.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/14.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/18.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/13.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -251,13 +251,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/7.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/13.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/4.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/4.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/5.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -279,13 +279,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/010.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/15.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/8.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/18.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/12.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
@@ -309,13 +309,13 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/11.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/12.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/12.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/8.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/8.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>

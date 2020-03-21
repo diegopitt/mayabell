@@ -85,7 +85,7 @@ const styles = theme => ({
     height: '290px',
     opacity: 1,
   },
-  ruins: { backgroundImage: 'url(../static/gallery/ruins1080.jpg)' },
+  ruins: { backgroundImage: 'url(../static/gallery/ruins.jpg)' },
   waterfalls: { backgroundImage: 'url(../static/gallery/misolha.jpg)' },
   aguazul: { backgroundImage: 'url(../static/gallery/aguaAzul.jpg)' },
   subtitleBar:{
@@ -138,7 +138,7 @@ class Index extends Component {
               <Typography component="p" variant="h6" color="primary">
                 MAYABELL TOURS
               </Typography>
-              <Typography component="p" variant="subtitle1" color="primary">
+              <Typography component="p" variant="body2" color="primary">
                 Let us know when you will be arriving and what kind of room you
                 would like to book. Make a reservation request now, pay when you
                 arrive.

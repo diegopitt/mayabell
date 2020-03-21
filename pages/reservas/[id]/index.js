@@ -48,7 +48,7 @@ const styles = theme => ({
     }
   },
   gridColorDark: {
-    backgroundImage: "url(../../../static/gallery/120.jpg)",
+    backgroundImage: "url(../../static/gallery/pool/p0.jpg)",
     backgroundPosition: "center center"
   },
   textField: {
@@ -132,36 +132,35 @@ class Index extends Component {
     let title = ''
     switch (id) {
       case '1':
-      img = "../static/gallery/4.jpg"
+      img = "../static/gallery/rooms/0.jpg"
       title = "Bungalow Familiar"
       break;
-
       case '2':
-        img = "../static/gallery/1.jpg"
+        img = "../static/gallery/rooms/1.jpg"
         title = "Privada 1"
       break;
       case '3':
-        img = "../static/gallery/11.jpg"
+        img = "../static/gallery/rooms/2.jpg"
         title = "Privada 2"
       break;
       case '4':
-        img = "../static/gallery/14.jpg"
+        img = "../static/gallery/rooms/3.jpg"
         title = "Privada 3"
       break;
       case '5':
-        img = "../static/gallery/1.jpg"
+        img = "../static/gallery/rooms/4.jpg"
         title = "Privada 4"
       break;
       case '6':
-        img = "../static/gallery/4.jpg"
+        img = "../static/gallery/rooms/5.jpg"
         title = "Privada 5"
       break;
       case '7':
-        img = "../static/gallery/11.jpg"
+        img = "../static/gallery/rooms/6.jpg"
         title = "Privada 6"
       break;
       case '8':
-        img = "../static/gallery/11.jpg"
+        img = "../static/gallery/rooms/7.jpg"
         title = "Privada 7"
       break;
       default:
