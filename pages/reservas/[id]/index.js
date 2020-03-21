@@ -250,7 +250,7 @@ class Index extends Component {
                       {title}
                       </Typography>
                       <Typography variant="subtitle1" color="textSecondary">
-                        $ 4000 por noche
+                        X 4 Noches
                       </Typography>
                     </CardContent>
                     <div className={classes.controls}>
