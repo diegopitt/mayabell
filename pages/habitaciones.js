@@ -142,9 +142,6 @@ class Index extends Component {
                         <img src="./static/gallery/rooms/7.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/8.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
                         <img src="./static/gallery/rooms/9.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
@@ -251,34 +248,6 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/rooms/13.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
-                        <img src="./static/gallery/rooms/4.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
-                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
-                      </div>
-                    </Slider>
-                  </div>
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/5">
-                    <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
-                  <div className={classes.media}>
-                    <Slider {...settings}>
-                      <div>
                         <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
@@ -301,34 +270,6 @@ class Index extends Component {
                 <CardActions>
                   <Link href="/reservas/6">
                   <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
-                  <div className={classes.media}>
-                    <Slider {...settings}>
-                      <div>
-                        <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
-                        <img src="./static/gallery/rooms/12.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
-                        <img src="./static/gallery/rooms/8.jpg" className={classes.img} alt="" />
-                      </div>
-                    </Slider>
-                  </div>
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/7">
-                    <Button size="small" color="primary">Hacer Reservacion</Button>
                   </Link>
                 </CardActions>
               </Card>

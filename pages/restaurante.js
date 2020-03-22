@@ -8,6 +8,10 @@ import Slider from "react-slick"
 import classNames from 'classnames'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
+import IosArrowDropright from "react-ionicons/lib/IosArrowForward";
+import IosArrowDropleft from "react-ionicons/lib/IosArrowBack";
+import IconButton from "@material-ui/core/IconButton";
+import Footer from '../layout/Footer'
 const styles = theme => ({
   wrapper: {
     margin: 0,
@@ -29,24 +33,49 @@ const styles = theme => ({
     }
   },
   paperDark: {
-    background: "rgba(0, 0, 0, 0.8)",
-    margin: theme.spacing(2, 2),
-    padding: theme.spacing(6, 2),
-  },
-  paperDark2: {
-    backgroundColor: '#dfd2ae',
-    backgroundImage: "url(../static/gallery/restaurant/r1.jpg)",
-    backgroundPosition: "center center",
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+    background: "rgba(0, 0, 0, 0.4)",
+    [theme.breakpoints.up("xs")]: {
+      padding: theme.spacing(2, 2),
+      margin: theme.spacing(10, 2)
+    },
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(2, 2),
+      margin: theme.spacing(10, 2)
+    }
   },
   gridColorDark2: {
     backgroundColor: '#dfd2ae',
     padding: theme.spacing(3, 0),
   },
+  gridColorDark3: {
+    backgroundImage: "url(../static/gallery/restaurant/r6.jpg)",
+    backgroundPosition: "center center",
+    backgroundRepeat: 'no-repeat',
+    position:'relative',
+    backgroundSize: 'cover',
+    height: '48vh'
+  },
   img: {
     width: '100%'
   },
+  prev: {
+    padding: "0px",
+    margin: "0px",
+    opacity: 0.8,
+    position: "absolute",
+    top: "40%",
+    left: "5%",
+    zIndex: 1
+  },
+  next: {
+    padding: "0px",
+    margin: "0px",
+    opacity: 0.8,
+    position: "absolute",
+    top: "40%",
+    right: "5%",
+    zIndex: 1
+  }
 });
 class Index extends Component {
   constructor(props) {
@@ -65,19 +94,40 @@ class Index extends Component {
   render() {
     const { classes } = this.props;
     const settings = { centerMode: true };
+    const ArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+      <IconButton {...props} aria-label="prev" className={classes.prev}>
+        <IosArrowDropleft fontSize="52px" color="#ffffff" />
+      </IconButton>
+    );
+    const ArrowRight = ({ currentSlide, slideCount, ...props }) => (
+      <IconButton {...props} aria-label="next" className={classes.next}>
+        <IosArrowDropright fontSize="52px" color="#ffffff" />
+      </IconButton>
+    );
+    const config = {
+      arrows: true,
+      infinite: true,
+      autoplay: false,
+      speed: 900,
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: <ArrowLeft />,
+      nextArrow: <ArrowRight />
+    };
     return (
       <Layout extendedHeader={false}>
         <br />
         <br />
         <br />
-        <Grid container spacing={4} className={classes.gridColorDark2}>
-          <Grid item xs={12}>
+        <Grid container spacing={0} className={classes.gridColorDark3}>
+          <Grid item xs={12} md={6}>
             <Paper className={classes.paperDark} elevation={0}>
-              <Typography component="p" variant="h6" gutterBottom color='primary'>
-                Restaurante & Pizzeria
+              <Typography component="p" variant="h5" color="primary" gutterBottom>
+                NUESTRA COCINA
               </Typography>
-              <Typography component="p" variant="body2" color="primary">
-                MAYABELL es un hotel y spa ubicado en Palenque, Chiapas. Ideal para consentirte en la alberca o jacuzzis, un agradable descanso en cualquiera de nuestras habitaciones de lujo, un masaje o buena comida en su restaurante exclusivo de comida internacional.
+              <Typography component="p" variant="subtitle2" color="primary">
+                Distruta de la gastronomía de la región preparada con ingredientes naturales.
               </Typography>
             </Paper>
           </Grid>
@@ -88,11 +138,18 @@ class Index extends Component {
               <Typography component="p" variant="h6" gutterBottom color='primary'>
                 Restaurante & Pizzeria
               </Typography>
-              <Typography component="p" variant="body2">
+              <Typography component="p" variant="body2" color='secondary'>
                 Distruta de la gastronomía de la región preparada con ingredientes naturales. contamos con alternativas vegetarianas y un exquisito café.
                 <br /><br />
               </Typography>
-              <img src='./static/gallery/restaurant/r2.jpg' className={classes.img} alt="logo" />
+              <Slider {...config}>
+                <div>
+                  <img src='./static/gallery/restaurant/r0.jpg' className={classes.img} alt="" />
+                </div>
+                <div>
+                  <img src='./static/gallery/restaurant/r3.jpg' className={classes.img} alt="" />
+                </div>
+              </Slider>
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -100,14 +157,25 @@ class Index extends Component {
               <Typography component="p" variant="h6" gutterBottom color='primary'>
                 Bar
               </Typography>
-              <Typography component="p" variant="body2">
+              <Typography component="p" variant="body2" color='secondary'>
                 Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
                 <br /><br />
               </Typography>
-              <img src='./static/gallery/restaurant/e.jpg' className={classes.img} alt="logo" />
+              <Slider {...config}>
+                <div>
+                  <img src='./static/gallery/restaurant/e.jpg' className={classes.img} alt="" />
+                </div>
+                <div>
+                  <img src='./static/gallery/restaurant/r5.jpg' className={classes.img} alt="" />
+                </div>
+                <div>
+                  <img src='./static/gallery/restaurant/c.jpg' className={classes.img} alt="" />
+                </div>
+              </Slider>
             </Paper>
           </Grid>
         </Grid>
+        <Footer />
       </Layout>
     )
   };
