@@ -33,14 +33,14 @@ const styles = theme => ({
     }
   },
   paperDark: {
-    background: "rgba(0, 0, 0, 0.4)",
+    background: "rgba(0, 0, 0, 0.6)",
     [theme.breakpoints.up("xs")]: {
       padding: theme.spacing(2, 2),
-      margin: theme.spacing(10, 2)
+      margin: theme.spacing(4, 2)
     },
     [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(2, 2),
-      margin: theme.spacing(10, 2)
+      margin: theme.spacing(4, 2)
     }
   },
   gridColorDark2: {
@@ -48,6 +48,7 @@ const styles = theme => ({
     padding: theme.spacing(3, 0),
   },
   gridColorDark3: {
+    paddingTop:70,
     backgroundImage: "url(../static/gallery/restaurant/r6.jpg)",
     backgroundPosition: "center center",
     backgroundRepeat: 'no-repeat',
@@ -117,9 +118,6 @@ class Index extends Component {
     };
     return (
       <Layout extendedHeader={false}>
-        <br />
-        <br />
-        <br />
         <Grid container spacing={0} className={classes.gridColorDark3}>
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperDark} elevation={0}>
