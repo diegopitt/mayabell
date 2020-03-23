@@ -134,18 +134,18 @@ class Index extends Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={2}>
               <Typography component="p" variant="h6" gutterBottom color='primary'>
-                Restaurante & Pizzeria
+                Pizzeria
               </Typography>
               <Typography component="p" variant="body2" color='secondary'>
-                Distruta de la gastronomía de la región preparada con ingredientes naturales. contamos con alternativas vegetarianas y un exquisito café.
+                Distruta de la gastronomía de la región preparada con ingredientes naturales. Contamos con alternativas vegetarianas y un exquisito café.
                 <br /><br />
               </Typography>
               <Slider {...config}>
                 <div>
-                  <img src='./static/gallery/restaurant/r0.jpg' className={classes.img} alt="" />
+                  <img src='./static/gallery/restaurant/r7.jpg' className={classes.img} alt="" />
                 </div>
                 <div>
-                  <img src='./static/gallery/restaurant/r3.jpg' className={classes.img} alt="" />
+                  <img src='./static/gallery/restaurant/r0.jpg' className={classes.img} alt="" />
                 </div>
               </Slider>
             </Paper>
@@ -153,7 +153,7 @@ class Index extends Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={2}>
               <Typography component="p" variant="h6" gutterBottom color='primary'>
-                Bar
+                Restobar
               </Typography>
               <Typography component="p" variant="body2" color='secondary'>
                 Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
@@ -161,10 +161,10 @@ class Index extends Component {
               </Typography>
               <Slider {...config}>
                 <div>
-                  <img src='./static/gallery/restaurant/e.jpg' className={classes.img} alt="" />
+                  <img src='./static/gallery/restaurant/r5.jpg' className={classes.img} alt="" />
                 </div>
                 <div>
-                  <img src='./static/gallery/restaurant/r5.jpg' className={classes.img} alt="" />
+                  <img src='./static/gallery/restaurant/e.jpg' className={classes.img} alt="" />
                 </div>
                 <div>
                   <img src='./static/gallery/restaurant/c.jpg' className={classes.img} alt="" />
