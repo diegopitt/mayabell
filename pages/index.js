@@ -29,7 +29,7 @@ const styles = theme => ({
     height: '100%',
     opacity: 1,
   },
-  img1: { backgroundImage: 'url(../static/gallery/pool/p7.jpg)' },
+  img1: { backgroundImage: 'url(../static/gallery/pool/p10.jpg)'},
   img2: { backgroundImage: 'url(../static/gallery/rooms/10.jpg)' },
   img3: { backgroundImage: 'url(../static/gallery/restaurant/r1.jpg)' },
   img4: { backgroundImage: 'url(../static/gallery/rooms/11.jpg)' },

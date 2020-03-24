@@ -30,8 +30,13 @@ const styles = theme => ({
   },
 
   gridColorDark: {
-    paddingTop: "68px",
-    backgroundColor: "#23262d"
+    backgroundColor: "#23262d",
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: "36px",
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: "56px",
+    }
   },
   gridColorBeige: {
     backgroundColor: "#f4f2db",
@@ -49,11 +54,11 @@ const styles = theme => ({
     background: "rgba(0, 0, 0, 0.6)",
     [theme.breakpoints.up("xs")]: {
       padding: theme.spacing(2, 2),
-      margin: theme.spacing(4, 2)
+      margin: theme.spacing(8, 2)
     },
     [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(2, 2),
-      margin: theme.spacing(4, 2)
+      margin: theme.spacing(6, 4)
     }
   },
   title: {
@@ -69,11 +74,11 @@ const styles = theme => ({
     },
     [theme.breakpoints.up("sm")]: {
       margin: theme.spacing(2),
-      padding: theme.spacing(2, 2),
+      padding: theme.spacing(2, 4),
     },
     [theme.breakpoints.up("md")]: {
       margin: theme.spacing(2),
-      padding: theme.spacing(2, 2),
+      padding: theme.spacing(2, 4),
     }
   },
   image:{
@@ -99,7 +104,7 @@ const styles = theme => ({
     alignItems: 'center',
   },
   subtitle: {
-    fontSize: theme.typography.pxToRem(12),
+    fontSize: theme.typography.pxToRem(11),
     lineHeight: 1.5,
     color: "#f4f2db",
     textOverflow: 'clip',
@@ -113,13 +118,9 @@ const styles = theme => ({
       width: '100%',
     },
     [theme.breakpoints.up("sm")]: {
-      minWidth: "320px",
-      maxWidth: "640px"
-    },
-    [theme.breakpoints.up("md")]: {
-      minWidth: "310px",
-      maxWidth: "630px"
-    },
+      minWidth: "280px",
+      maxWidth: "600px"
+    }
   }
 });
 class Index extends Component {
@@ -148,7 +149,7 @@ class Index extends Component {
         </Grid>
         <Grid container spacing={0}>
           <Grid item xs={12}>
-            <GridList cols={2} cellHeight='auto' spacing={10} className={classes.gridList}>
+            <GridList cols={2} cellHeight='auto' spacing={32} className={classes.gridList}>
               <GridListTile style={{ height: 'auto' }} className={classes.tileWrap}>
                 <div>
                   <div className={classNames(classes.image, classes.ruins)} />
