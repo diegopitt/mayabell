@@ -31,15 +31,15 @@ const styles = theme => ({
   darkcolor: {
     color: "#453420",
     opacity: 1,
-    fontSize: 14,
-    fontWeight: 400,
+    fontSize: 13,
+    fontWeight: 500,
     textTransform: "none"
   },
   lightcolor: {
     color: "#ffffff",
     opacity: 1,
-    fontSize: 14,
-    fontWeight: 400,
+    fontSize: 13,
+    fontWeight: 500,
     textTransform: "none"
   },
   menuWrap: {
@@ -141,18 +141,20 @@ class Header extends Component {
               <IosAppsOutline color={turnDarker ? '#483119' : '#FFFFFF'} fontSize="30px" />
             </IconButton>
             <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={this.handleClose}>
-              <Link href="/habitaciones">
-                <MenuItem onClick={this.handleClose}>Habitaciones</MenuItem>
-              </Link>
-              <Link href="/restaurante">
-                <MenuItem onClick={this.handleClose}>Restaurante</MenuItem>
-              </Link>
-              <Link href="/relajacion">
-                <MenuItem onClick={this.handleClose}>Relajacion</MenuItem>
-              </Link>
-              <Link href="/tours">
-                <MenuItem onClick={this.handleClose}>Tours</MenuItem>
-              </Link>
+              <div>
+                <Link href="/habitaciones">
+                  <MenuItem onClick={this.handleClose}>Habitaciones</MenuItem>
+                </Link>
+                <Link href="/restaurante">
+                  <MenuItem onClick={this.handleClose}>Restaurante</MenuItem>
+                </Link>
+                <Link href="/relajacion">
+                  <MenuItem onClick={this.handleClose}>Relajacion</MenuItem>
+                </Link>
+                <Link href="/tours">
+                  <MenuItem onClick={this.handleClose}>Tours</MenuItem>
+                </Link>
+              </div>
             </Menu>
           </div>
         </Toolbar>

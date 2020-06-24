@@ -1,43 +1,34 @@
-import React, { Component } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import Layout from "../layout/Layout";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Link from "next/link";
-import GridList from "@material-ui/core/GridList";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import IosArrowDropright from "react-ionicons/lib/IosArrowDroprightCircle";
-import IosArrowDropleft from "react-ionicons/lib/IosArrowDropleftCircle";
-import CardMedia from "@material-ui/core/CardMedia";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
+import React, { Component } from "react"
+import { withStyles } from "@material-ui/core/styles"
+import Layout from "../layout/Layout"
+import Grid from "@material-ui/core/Grid"
+import Paper from "@material-ui/core/Paper"
+import Typography from "@material-ui/core/Typography"
+import GridList from "@material-ui/core/GridList"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import IosArrowDropright from "react-ionicons/lib/IosArrowDroprightCircle"
+import IosArrowDropleft from "react-ionicons/lib/IosArrowDropleftCircle"
+import IconButton from "@material-ui/core/IconButton"
+import Button from "@material-ui/core/Button"
+import Router from 'next/router'
+
 const styles = theme => ({
-  wrapper: {
-    margin: 0,
-    padding: 0,
-    background: "#23262d"
-  },
   root: {
-    //flexGrow: 1,
+    paddingTop: "36px",
     background: "#f4f2db"
-  },
-  img: {
-    width: "100%"
   },
   card: {
     [theme.breakpoints.up("xs")]: {
       minWidth: "100%",
       maxWidth: "",
       margin: 0,
+      cursor: 'pointer',
       marginBottom: 24,
-      width: "100%"
+      borderRadius: '4px',
+      width: '100%',
+      boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
     },
     [theme.breakpoints.up("sm")]: {
       minWidth: "320px",
@@ -74,6 +65,13 @@ const styles = theme => ({
     margin: theme.spacing(6, 2),
     padding: theme.spacing(6, 2)
   },
+  content: {
+    padding: theme.spacing(2, 2)
+  },
+  action: {
+    padding: theme.spacing(1, 1),
+    textAlign:'right'
+  },
   gridColorDark: {
     backgroundColor: "#23262d"
   },
@@ -98,7 +96,10 @@ const styles = theme => ({
     top: "50%",
     right: "5%",
     zIndex: 1
-  }
+  },
+  button: {
+    color: "#f4f2db"
+  },
 });
 class Index extends Component {
   constructor(props) {
@@ -108,15 +109,20 @@ class Index extends Component {
 
   render() {
     const { classes } = this.props;
+    const handleClick = (e, room) => {
+      console.log(room)
+      e.preventDefault()
+      //router.push({ pathname: `${href}` })
+    }
     const ArrowLeft = props => (
-      <IconButton {...props} aria-label="prev" className={classes.prev}>
-        <IosArrowDropleft fontSize="38px" color="#ffffff" />
-      </IconButton>
+        <IconButton {...props} aria-label="prev" className={classes.prev}>
+          <IosArrowDropleft fontSize="38px" color="#ffffff" />
+        </IconButton>
     );
     const ArrowRight = props => (
-      <IconButton {...props} aria-label="next" className={classes.next}>
-        <IosArrowDropright fontSize="38px" color="#ffffff" />
-      </IconButton>
+        <IconButton {...props} aria-label="next" className={classes.next}>
+          <IosArrowDropright fontSize="38px" color="#ffffff" />
+        </IconButton>
     );
     const settings = {
       arrows: true,
@@ -129,13 +135,11 @@ class Index extends Component {
     };
     return (
       <Layout extendedHeader={false}>
-        <br />
-        <br />
         <Grid container spacing={10} className={classes.root}>
           <Grid item xs={12}>
             <GridList cellHeight="auto" className={classes.GridList}>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
+              <div className={classes.card}>
+                <div>
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
@@ -146,21 +150,19 @@ class Index extends Component {
                       </div>
                     </Slider>
                   </div>
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="h2">Bungalow Familiar</Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                  <div className={classes.content}>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Bungalow Familiar</Typography>
+                    <Typography variant="body2" color="secondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/1">
-                    <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
+                  </div>
+                  <div className={classes.action}>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/1`) }}>Hacer Reservacion</Button>
+                  </div>
+                </div>
+              </div>
+              <div className={classes.card}>
+                <div>
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
@@ -174,21 +176,19 @@ class Index extends Component {
                       </div>
                     </Slider>
                   </div>
-                  <CardContent>
-                  <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
+                  <div className={classes.content}>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="secondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/2">
-                    <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
+                  </div>
+                <div className={classes.action}>
+                  <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/2`) }}>Hacer Reservacion</Button>
+                </div>
+                </div>
+              </div>
+              <div className={classes.card}>
+                <div>
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
@@ -202,21 +202,19 @@ class Index extends Component {
                       </div>
                     </Slider>
                   </div>
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                  <div className={classes.content}>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="secondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/3">
-                    <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
+                  </div>
+                  <div className={classes.action}>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/3`) }}>Hacer Reservacion</Button>
+                  </div>
+                </div>
+              </div>
+              <div className={classes.card}>
+                <div>
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
@@ -230,49 +228,42 @@ class Index extends Component {
                       </div>
                     </Slider>
                   </div>
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="h2">Habitacion Privada</Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                  <div className={classes.content}>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitacion Privada</Typography>
+                    <Typography variant="body2" color="secondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/4">
-                    <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
-              <Card className={classes.card}>
-                <CardActionArea disableRipple>
+                  </div>
+                  <div className={classes.action}>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/4`) }}>Hacer Reservacion</Button>
+                  </div>
+                </div>
+              </div>
+              <div className={classes.card}>
+                <div>
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
                         <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/8.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
                         <img src="./static/gallery/rooms/12.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
-                  <CardContent>
-                    <Typography gutterBottom variant="subtitle2" component="h2">
+                  <div className={classes.content}>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">
                       Habitacion Privada
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography variant="body2" color="secondary" component="p">
                       Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
                     </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <Link href="/reservas/6">
-                  <Button size="small" color="primary">Hacer Reservacion</Button>
-                  </Link>
-                </CardActions>
-              </Card>
+                  </div>
+                  <div className={classes.action}>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/5`) }}>Hacer Reservacion</Button>
+                  </div>
+                </div>
+              </div>
             </GridList>
           </Grid>
         </Grid>

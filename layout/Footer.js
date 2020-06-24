@@ -287,7 +287,7 @@ class Footer extends Component {
 
     return (
       <Grid container spacing={0} className={classes.colorFooter}>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={4}>
           <Paper className={classes.contactWrap} elevation={0}>
             <Typography component="h2" variant="h6" gutterBottom color="secondary">CONTACTO</Typography>
             <Typography component="p" className={classes.bold} variant="body1">Carretera Ruinas KM 6 - Mayabell</Typography>
@@ -297,7 +297,7 @@ class Footer extends Component {
             <Typography component="p" className={classes.bold} variant="body1">(916) 688-0013</Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={9}>
+        <Grid item xs={12} md={8}>
           <Paper className={classes.mapWrap} elevation={0}>
             <div className={classes.Wrap}>
               {this.state.mounted > 0 && <GoogleMapReact options={mapOptions} bootstrapURLKeys={{ key: 'AIzaSyBZMHeui6QHt3JXnzgFCLVolXN0JaTiNWA' }} zoom={15} center={this.state.center}></GoogleMapReact>}

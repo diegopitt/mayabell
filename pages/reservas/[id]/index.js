@@ -37,18 +37,18 @@ const styles = theme => ({
     borderRadius: "0px"
   },
   paperDark: {
-    background: "rgba(0, 0, 0, 0.6)",
+    background: "transparent",
     [theme.breakpoints.up("xs")]: {
       padding: theme.spacing(2, 2),
       margin: theme.spacing(10, 2)
     },
     [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(2, 2),
-      margin: theme.spacing(20, 2)
+      margin: theme.spacing(2, 2)
     }
   },
   gridColorDark: {
-    backgroundImage: "url(../../static/gallery/pool/p0.jpg)",
+    backgroundImage: "url(../../static/gallery/pool/p11.jpg)",
     backgroundPosition: "center center"
   },
   textField: {
@@ -173,12 +173,7 @@ class Index extends Component {
             <Grid item xs={12} md={8}>
               <Paper className={classes.paperDark} elevation={0}>
                 <Typography component="p" variant="h6" color="primary">
-                  Book Your Room
-                </Typography>
-                <Typography component="p" variant="subtitle1" color="primary">
-                  Let us know when you will be arriving and what kind of room
-                  you would like to book. Make a reservation request now, pay
-                  when you arrive.
+                  RESERVA TU HABITACION
                 </Typography>
               </Paper>
             </Grid>
@@ -246,7 +241,7 @@ class Index extends Component {
                 <Card elevation={5} className={classes.card}>
                   <div className={classes.details}>
                     <CardContent className={classes.content}>
-                      <Typography component="h5" variant="h5">
+                      <Typography component="h5" variant="subtitle2">
                       {title}
                       </Typography>
                       <Typography variant="subtitle1" color="textSecondary">

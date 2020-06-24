@@ -106,7 +106,7 @@ class Tours extends Component {
             </Link>
           </Paper>
           <Typography component="div" variant="body2" className={classes.ruinsCaptions}>
-            Mayabell is located 300 meters from the ruins, from here you can visit waterfalls, trekking, and tours to the jungle.
+          Mayabell se encuentra a 300 metros de las ruinas, desde aquí se pueden visitar cascadas, hacer trekking y excursiones por la selva.
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -119,7 +119,7 @@ class Tours extends Component {
             </Link>
           </Paper>
           <Typography component="div" variant="body2" className={classes.ruinsCaptions}>
-          Agua Azul are a series of waterfalls found on the Xanil River in the southern state 68 kilometres from Mayabell
+          Agua Azul es una serie de cascadas que se encuentran en el río Xanil en el estado sureño a 68 kilómetros de Mayabell
           </Typography>
         </Grid>
       </Grid>

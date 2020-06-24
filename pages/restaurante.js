@@ -48,13 +48,19 @@ const styles = theme => ({
     padding: theme.spacing(3, 0),
   },
   gridColorDark3: {
-    paddingTop:70,
     backgroundImage: "url(../static/gallery/restaurant/r6.jpg)",
     backgroundPosition: "center center",
     backgroundRepeat: 'no-repeat',
     position:'relative',
     backgroundSize: 'cover',
-    height: '48vh'
+    [theme.breakpoints.up("xs")]: {
+      paddingTop:60,
+      height: '52vh',
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingTop:70,
+      height: '48vh',
+    }
   },
   img: {
     width: '100%'

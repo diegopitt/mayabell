@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "mayabell",
   "regions": ["sfo"],
   "builds": [
     { "src": "package.json", "use": "@now/next" }

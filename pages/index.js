@@ -205,7 +205,7 @@ class Index extends Component {
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img1)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.caption}>WELCOME TO MAYABELL HOTEL</div>
+                    <div className={classes.caption}>BIENVENIDO A HOTEL MAYABELL</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
