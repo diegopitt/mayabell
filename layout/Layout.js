@@ -21,9 +21,7 @@ const styles = theme => ({
       padding: '0px'
     }
   },
-  header: {
-    
-  },
+  header: {},
 });
 class Layout extends Component {
 

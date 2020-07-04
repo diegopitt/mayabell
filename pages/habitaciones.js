@@ -114,15 +114,15 @@ class Index extends Component {
       e.preventDefault()
       //router.push({ pathname: `${href}` })
     }
-    const ArrowLeft = props => (
-        <IconButton {...props} aria-label="prev" className={classes.prev}>
-          <IosArrowDropleft fontSize="38px" color="#ffffff" />
-        </IconButton>
+    const ArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+      <IconButton {...props} aria-label="prev" className={classes.prev}>
+        <IosArrowDropleft fontSize="38px" color="#ffffff" />
+      </IconButton>
     );
-    const ArrowRight = props => (
-        <IconButton {...props} aria-label="next" className={classes.next}>
-          <IosArrowDropright fontSize="38px" color="#ffffff" />
-        </IconButton>
+    const ArrowRight = ({ currentSlide, slideCount, ...props }) => (
+      <IconButton {...props} aria-label="next" className={classes.next}>
+        <IosArrowDropright fontSize="38px" color="#ffffff" />
+      </IconButton>
     );
     const settings = {
       arrows: true,
@@ -143,17 +143,23 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/rooms/7.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/2.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/9.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/3.jpg" className={classes.img} alt="" />
+                      </div>
+                      <div>
+                        <img src="./static/gallery/rooms/4.jpg" className={classes.img} alt="" />
+                      </div>
+                      <div>
+                        <img src="./static/gallery/rooms/14.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <div className={classes.content}>
-                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Bungalow Familiar</Typography>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Suite Familiar</Typography>
                     <Typography variant="body2" color="secondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
+                    Suite Familiar con aire acondicionado con 1 cama king size, 2 camas matrimoniales y 1 cama individual, para 7 personas.
                     </Typography>
                   </div>
                   <div className={classes.action}>
@@ -166,20 +172,23 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/rooms/6.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/v1.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/v2.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/4.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/v3.jpg" className={classes.img} alt="" />
+                      </div>
+                      <div>
+                        <img src="./static/gallery/rooms/v4.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <div className={classes.content}>
-                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Cabaña con ventilador</Typography>
                     <Typography variant="body2" color="secondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
+                      Cabaña con ventilador con 1 cama matrimonial, para 2 personas.<br /><br /><br />
                     </Typography>
                   </div>
                 <div className={classes.action}>
@@ -192,20 +201,17 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/rooms/1.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/hv1.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
-                        <img src="./static/gallery/rooms/7.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/hv2.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <div className={classes.content}>
-                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitación con  ventilador</Typography>
                     <Typography variant="body2" color="secondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
+                    Habitación con  ventilador con 1 cama matrimonial mas 1 cama individual, para 3 personas<br /><br />
                     </Typography>
                   </div>
                   <div className={classes.action}>
@@ -218,20 +224,17 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                     <div>
-                        <img src="./static/gallery/rooms/15.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/14.jpg" className={classes.img} alt="" />
-                      </div>
-                      <div>
-                        <img src="./static/gallery/rooms/13.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/77.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <div className={classes.content}>
-                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitacion Privada</Typography>
+                    <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">Habitación con aire acondicionado</Typography>
                     <Typography variant="body2" color="secondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
+                    Habitación con aire acondicionado con 1 cama matrimonial mas 1 cama individual , para 3 personas.
                     </Typography>
                   </div>
                   <div className={classes.action}>
@@ -244,19 +247,22 @@ class Index extends Component {
                   <div className={classes.media}>
                     <Slider {...settings}>
                       <div>
-                        <img src="./static/gallery/rooms/11.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/5.jpg" className={classes.img} alt="" />
                       </div>
                       <div>
-                        <img src="./static/gallery/rooms/12.jpg" className={classes.img} alt="" />
+                        <img src="./static/gallery/rooms/aa1.jpg" className={classes.img} alt="" />
+                      </div>
+                      <div>
+                        <img src="./static/gallery/rooms/aa2.jpg" className={classes.img} alt="" />
                       </div>
                     </Slider>
                   </div>
                   <div className={classes.content}>
                     <Typography gutterBottom color="secondary" variant="subtitle2" component="h2">
-                      Habitacion Privada
+                    Habitación con aire acondicionado
                     </Typography>
                     <Typography variant="body2" color="secondary" component="p">
-                      Casa completa que consta de 2 habitaciones c/u con baño completo, sala, comedor, cocina, terraza y 1/2 baño
+                    Habitación con aire acondicionado con 1 cama matrimonial, para 2 personas.<br /><br />
                     </Typography>
                   </div>
                   <div className={classes.action}>

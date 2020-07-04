@@ -293,8 +293,9 @@ class Footer extends Component {
             <Typography component="p" className={classes.bold} variant="body1">Carretera Ruinas KM 6 - Mayabell</Typography>
             <Typography component="p" className={classes.italic} variant="body2">A 500 Metros del sitio Arqueologico</Typography>
             <Typography component="p" className={classes.bold} variant="body1">Palenque, Chiapas</Typography>
-            <Typography component="p" className={classes.bold} variant="body1">reservaciones@mayabell.mx</Typography>
+            <Typography component="p" className={classes.bold} variant="body1">mayabellpalenque@gmail.com</Typography>
             <Typography component="p" className={classes.bold} variant="body1">(916) 688-0013</Typography>
+            <Typography component="p" className={classes.bold} variant="body1">WhatsApp (916) 341-6977</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} md={8}>

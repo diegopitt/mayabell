@@ -68,7 +68,7 @@ class Index extends Component {
               MASAJES & TEMAZCAL
               </Typography>
               <Typography component="p" variant="body2" color="primary">
-                Disfrute de nuestros servicios de relajacion total
+              Aquí la tranquilidad prevalece, ideal para que su estancia sea una experiencia rejuvenecedora. Masajes faciales, corporales; temazcal y Reiki.
               </Typography>
             </Paper>
           </Grid>

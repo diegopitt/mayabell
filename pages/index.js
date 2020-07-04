@@ -29,7 +29,7 @@ const styles = theme => ({
     height: '100%',
     opacity: 1,
   },
-  img1: { backgroundImage: 'url(../static/gallery/pool/p10.jpg)'},
+  img1: { backgroundImage: 'url(../static/gallery/pool/p12.jpg)'},
   img2: { backgroundImage: 'url(../static/gallery/rooms/10.jpg)' },
   img3: { backgroundImage: 'url(../static/gallery/restaurant/r1.jpg)' },
   img4: { backgroundImage: 'url(../static/gallery/rooms/11.jpg)' },
@@ -205,7 +205,7 @@ class Index extends Component {
                 <div className={classes.imgwrapper}>
                   <div className={classNames(classes.image, classes.img1)} />
                   <div className={classes.captionwrapper}>
-                    <div className={classes.caption}>BIENVENIDO A HOTEL MAYABELL</div>
+                    <div className={classes.caption}>BIENVENIDO A MAYABELL</div>
                   </div>
                 </div>
                 <div className={classes.imgwrapper}>
@@ -238,7 +238,7 @@ class Index extends Component {
                 HOTEL MAYABELL
               </Typography>
               <Typography component="p" variant="body2" color="primary" className={classes.lS}>
-                MAYABELL es un hotel y spa ubicado en Palenque, Chiapas. Ideal para consentirte en la alberca o jacuzzis, un agradable descanso en cualquiera de nuestras habitaciones de lujo, un masaje o buena comida en su restaurante exclusivo de comida internacional.
+                MAYABELL es un Hotel y Spa ubicado en Palenque, Chiapas. Ideal para consentirte en la alberca, un agradable descanso en cualquiera de nuestras confortables habitaciones, un masaje y una buena comida en su restaurante de comida regional e internacional.
               </Typography>
             </Paper>
           </Grid>

@@ -7,6 +7,7 @@ import Card from "@material-ui/core/Card"
 import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import format from 'date-fns/format'
+import fetch from 'node-fetch'
 import DateFnsUtils from '@date-io/date-fns'
 import getISOWeek from 'date-fns/getISOWeek'
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers'
@@ -40,7 +41,7 @@ const styles = theme => ({
     background: "transparent",
     [theme.breakpoints.up("xs")]: {
       padding: theme.spacing(2, 2),
-      margin: theme.spacing(10, 2)
+      margin: theme.spacing(1, 2)
     },
     [theme.breakpoints.up("sm")]: {
       padding: theme.spacing(2, 2),
@@ -49,7 +50,6 @@ const styles = theme => ({
   },
   gridColorDark: {
     backgroundImage: "url(../../static/gallery/pool/p11.jpg)",
-    backgroundPosition: "center center"
   },
   textField: {
     // border: '1px solid #483119',
@@ -103,15 +103,71 @@ class Index extends Component {
       mounted: false,
       checkout: null,
       checkin: null,
-      center: {
-        lat: 17.488424,
-        lng: -92.036562
+      submitted: false,
+      submitting: false,
+      error: false, 
+      msg: null,
+      inputs:{
+        email: 'diego.pittaluga@gmail.com',
+        message: 'testing send mail'
       }
     };
   }
   componentDidMount() {
     this.setState({ mounted: true });
   }
+
+
+
+
+
+
+
+
+
+  handleOnSubmit = async e => {
+    e.preventDefault()
+    this.setState({ submitting: true });
+    const res = await fetch('/api/send1', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name: 'diego', email: 'diego.pittaluga@gmail.com' })
+    })
+    const text = await res.text()
+    //handleResponse(res.status, text)
+    console.log(res.status);
+    console.log(text);
+  }
+  handleResponse = (status, msg) => {
+    if (status === 200) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg }
+      })
+      setInputs({
+        email: '',
+        message: ''
+      })
+    } else {
+      setStatus({
+        info: { error: true, msg: msg }
+      })
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
   handleTemplateDate = (date) => {
     // const newState = { ...this.state };
     // const sdate = format(date, 'MM/dd/yyyy')
@@ -132,36 +188,24 @@ class Index extends Component {
     let title = ''
     switch (id) {
       case '1':
-      img = "../static/gallery/rooms/0.jpg"
-      title = "Bungalow Familiar"
+      img = "../static/gallery/rooms/2.jpg"
+      title = "Suite Familiar"
       break;
       case '2':
-        img = "../static/gallery/rooms/1.jpg"
-        title = "Privada 1"
+        img = "../static/gallery/rooms/v1.jpg"
+        title = "Cabaña con ventilador"
       break;
       case '3':
-        img = "../static/gallery/rooms/2.jpg"
-        title = "Privada 2"
+        img = "../static/gallery/rooms/hv1.jpg"
+        title = "Habitación con  ventilador"
       break;
       case '4':
-        img = "../static/gallery/rooms/3.jpg"
-        title = "Privada 3"
+        img = "../static/gallery/rooms/11.jpg"
+        title = "Habitación con aire acondicionado"
       break;
       case '5':
-        img = "../static/gallery/rooms/4.jpg"
-        title = "Privada 4"
-      break;
-      case '6':
         img = "../static/gallery/rooms/5.jpg"
-        title = "Privada 5"
-      break;
-      case '7':
-        img = "../static/gallery/rooms/6.jpg"
-        title = "Privada 6"
-      break;
-      case '8':
-        img = "../static/gallery/rooms/7.jpg"
-        title = "Privada 7"
+        title = "Habitación con aire acondicionado"
       break;
       default:
        
@@ -249,7 +293,7 @@ class Index extends Component {
                       </Typography>
                     </CardContent>
                     <div className={classes.controls}>
-                      <Button size="small" className={classes.button} variant="contained" color="secondary">Confirmar</Button>
+                      <Button size="small" className={classes.button} onClick={this.handleOnSubmit} variant="contained" color="secondary">Confirmar</Button>
                     </div>
                   </div>
                   <CardMedia className={classes.cover} image={img} title="" />
