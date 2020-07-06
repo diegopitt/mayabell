@@ -27,7 +27,7 @@ export default class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
-          <title>Maya Bell</title>
+          <title>Mayabell</title>
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
