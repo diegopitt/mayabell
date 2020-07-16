@@ -1,18 +1,36 @@
 const sgMail = require('@sendgrid/mail')
 
 export default async function(req, res) {
-  sgMail.setApiKey('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')
-
-  const { email, message } = req.body.data
-
+  sgMail.setApiKey(process.env.SGkey)
+  const { name, checkin, checkout, nights,email, message, adults, children, roomType} = req.body.data
+  console.log(roomType)
   const content = {
-    to: 'diego.pittaluga@gmail.com',
-    from: 'diego.pittaluga@gmail.com',
-    subject: `Nueva reservacion de ${email}`,
-    html: `<p>${message}</p>`,
-    // template_id: 'd-57cbf014a37340919bfbc813654fcdcc'
+    "from":{
+      "email":"reservaciones@mayabell.mx"
+   },
+   "reply_to": email ,
+   "personalizations":[
+      {
+         "to":[
+            {
+               "email":"diego.pittaluga@gmail.com"
+            }
+         ],
+         "dynamic_template_data":{
+            "name":name,
+            "type":roomType,
+            "email":email,
+            "adults":adults,
+            "children":children,
+            "checkin":checkin,
+            "checkout":checkout,
+            "nights":nights,
+            "message":message
+          }
+      }
+   ],
+   "template_id":"d-f0d865cb2f1a49a3abd79b87e171e251"
   }
-
   try {
     await sgMail.send(content)
     res.status(200).send('Message sent successfully.')

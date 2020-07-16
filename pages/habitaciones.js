@@ -1,17 +1,12 @@
 import React, { Component } from "react"
-import { withStyles } from "@material-ui/core/styles"
 import Layout from "../layout/Layout"
-import Grid from "@material-ui/core/Grid"
-import Paper from "@material-ui/core/Paper"
-import Typography from "@material-ui/core/Typography"
-import GridList from "@material-ui/core/GridList"
+import { withStyles } from "@material-ui/core/styles"
+import { Button, Grid, Paper, Typography, GridList, IconButton } from "@material-ui/core"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 import IosArrowDropright from "react-ionicons/lib/IosArrowDroprightCircle"
 import IosArrowDropleft from "react-ionicons/lib/IosArrowDropleftCircle"
-import IconButton from "@material-ui/core/IconButton"
-import Button from "@material-ui/core/Button"
 import Router from 'next/router'
 
 const styles = theme => ({
@@ -20,15 +15,20 @@ const styles = theme => ({
     background: "#f4f2db"
   },
   card: {
+    backgroundColor: "#faf9ee",
+    transition: "all .25s linear",
+    borderRadius: '4px',
+    width: '100%',
+    boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
+    cursor: 'pointer',
+    "&:hover": {
+      boxShadow: "-1px 11px 20px 0px rgba(160, 125, 45, 0.8)"
+    },
     [theme.breakpoints.up("xs")]: {
       minWidth: "100%",
       maxWidth: "",
       margin: 0,
-      cursor: 'pointer',
       marginBottom: 24,
-      borderRadius: '4px',
-      width: '100%',
-      boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
     },
     [theme.breakpoints.up("sm")]: {
       minWidth: "320px",
@@ -40,12 +40,6 @@ const styles = theme => ({
       maxWidth: "330px",
       margin: 8
     },
-    backgroundColor: "#faf9ee",
-    transition: "all .25s linear",
-    boShadow: "0px 1px 2px 0px ",
-    "&:hover": {
-      boxShadow: "-1px 11px 20px 0px rgba(160, 125, 45, 0.8)"
-    }
   },
   media: {
     height: 180
@@ -109,11 +103,6 @@ class Index extends Component {
 
   render() {
     const { classes } = this.props;
-    const handleClick = (e, room) => {
-      console.log(room)
-      e.preventDefault()
-      //router.push({ pathname: `${href}` })
-    }
     const ArrowLeft = ({ currentSlide, slideCount, ...props }) => (
       <IconButton {...props} aria-label="prev" className={classes.prev}>
         <IosArrowDropleft fontSize="38px" color="#ffffff" />

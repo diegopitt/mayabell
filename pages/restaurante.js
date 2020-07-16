@@ -53,14 +53,8 @@ const styles = theme => ({
     backgroundRepeat: 'no-repeat',
     position:'relative',
     backgroundSize: 'cover',
-    [theme.breakpoints.up("xs")]: {
-      paddingTop:60,
-      height: '52vh',
-    },
-    [theme.breakpoints.up("sm")]: {
-      paddingTop:70,
-      height: '48vh',
-    }
+    paddingTop:70,
+    height: '280px',
   },
   img: {
     width: '100%'
@@ -100,7 +94,6 @@ class Index extends Component {
   }
   render() {
     const { classes } = this.props;
-    const settings = { centerMode: true };
     const ArrowLeft = ({ currentSlide, slideCount, ...props }) => (
       <IconButton {...props} aria-label="prev" className={classes.prev}>
         <IosArrowDropleft fontSize="52px" color="#ffffff" />
