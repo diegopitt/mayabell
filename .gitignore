@@ -1,7 +1,11 @@
 node_modules
 yarn-error.log
 .next
-
+.vscode
 .now
 .vercel
 .env
+yarn.lock
+package-lock.json
+.nowignore
+.gitignore

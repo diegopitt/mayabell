@@ -118,6 +118,10 @@ class Index extends Component {
       }
     };
   }
+  isEmail = (email = null) => {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+  }
   handleInputChange = (name, value) => {
     const newState = { ...this.state }
     newState.inputs[name] = value
@@ -139,7 +143,7 @@ class Index extends Component {
       this.setState({ adults_e: true })
       errors = true
     }
-    if (this.state.inputs.email === ''){
+    if (!this.isEmail(this.state.inputs.email)){
       this.setState({ email_e: true })
       errors = true
     }
