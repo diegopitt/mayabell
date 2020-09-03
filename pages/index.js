@@ -140,9 +140,7 @@ const styles = theme => ({
       padding: theme.spacing(1, 1),
     }
   },
-  lS:{
-    //letterSpacing: '0.1025em',
-  },
+  lS:{},
   map: {
     width: '100%'
   },
