@@ -12,6 +12,7 @@ import IosArrowDropright from "react-ionicons/lib/IosArrowForward";
 import IosArrowDropleft from "react-ionicons/lib/IosArrowBack";
 import IconButton from "@material-ui/core/IconButton";
 import Footer from '../layout/Footer'
+import Resto from '../layout/Resto'
 const styles = theme => ({
   wrapper: {
     margin: 0,
@@ -172,6 +173,7 @@ class Index extends Component {
             </Paper>
           </Grid>
         </Grid>
+        <Resto />
         <Footer />
       </Layout>
     )

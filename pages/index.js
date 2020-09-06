@@ -248,10 +248,10 @@ class Index extends Component {
               <Typography component="p" variant="h4" color='primary' gutterBottom>
                 SPA
               </Typography>
-              <Typography component="p" gutterBottom variant="body2">
-                Aquí la tranquilidad prevalece, ideal para que su estancia sea una experiencia rejuvenecedora. hidromasajes, faciales, corporales, terapias y Reiki.
+              <Typography component="p" gutterBottom variant="body2" gutterBottom>
+                Aquí la tranquilidad prevalece, ideal para que su estancia sea una experiencia rejuvenecedora. Hidromasajes, faciales, corporales, terapias y Reiki.
               </Typography>
-              <img src='./static/gallery/rooms/11.jpg' className={classes.img} alt="" />
+              <img src='./static/gallery/spaindex.jpeg' className={classes.img} alt="" />
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -260,8 +260,7 @@ class Index extends Component {
                 Alberca
               </Typography>
               <Typography component="p" variant="body2" gutterBottom>
-                Tomar el sol, convivir con los seres queridos y disfrutar de un buen atardecer es de los grandes placeres de la estancia.
-                <br /><br />
+                Tomar el sol, convivir con los seres queridos, disfrutar la naturaleza y un buen atardecer será de los grandes placeres de su estancia en Mayabell.
               </Typography>
               <img src='./static/gallery/pool/p8.jpg' className={classes.img} alt="" />
             </Paper>
