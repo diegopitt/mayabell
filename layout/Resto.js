@@ -13,15 +13,7 @@ import IconButton from "@material-ui/core/IconButton";
 const styles = theme => ({
   gridMapColor: {
     backgroundColor: '#23262d',
-    [theme.breakpoints.up('xs')]: {
-      padding: theme.spacing(5, 1),
-    },
-    [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(4, 1),
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6, 1),
-    }
+    padding: theme.spacing(3, 0)
   },
   paperBeige: {
     backgroundColor: '#ede7cc',
