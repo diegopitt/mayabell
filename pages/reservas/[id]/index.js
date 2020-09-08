@@ -242,7 +242,7 @@ class Index extends Component {
                 {inputs.roomType}
                 </Typography>
                 <Typography hidden={!submitted} gutterBottom component="p" variant="h6" color="primary" gutterBottom>
-                  HEMOS RECIBIDO TU RESERVACION
+                  HEMOS RECIBIDO TU SOLICITUD
                 </Typography>
                 <Typography gutterBottom hidden={!submitted} component="p" variant="body2" color="primary">
                   Nos pondremos en contacto al correo electronico que nos proporcionaste.<br /> Muchas gracias!

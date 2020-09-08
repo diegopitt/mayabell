@@ -152,7 +152,7 @@ class Index extends Component {
                     </Typography>
                   </div>
                   <div className={classes.action}>
-                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/1`) }}>Hacer Reservacion</Button>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/1`) }}>Solicitar Disponibilidad</Button>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ class Index extends Component {
                     </Typography>
                   </div>
                 <div className={classes.action}>
-                  <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/2`) }}>Hacer Reservacion</Button>
+                  <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/2`) }}>Solicitar Disponibilidad</Button>
                 </div>
                 </div>
               </div>
@@ -204,7 +204,7 @@ class Index extends Component {
                     </Typography>
                   </div>
                   <div className={classes.action}>
-                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/3`) }}>Hacer Reservacion</Button>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/3`) }}>Solicitar Disponibilidad</Button>
                   </div>
                 </div>
               </div>
@@ -227,7 +227,7 @@ class Index extends Component {
                     </Typography>
                   </div>
                   <div className={classes.action}>
-                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/4`) }}>Hacer Reservacion</Button>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/4`) }}>Solicitar Disponibilidad</Button>
                   </div>
                 </div>
               </div>
@@ -255,7 +255,7 @@ class Index extends Component {
                     </Typography>
                   </div>
                   <div className={classes.action}>
-                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/5`) }}>Hacer Reservacion</Button>
+                    <Button disableElevation size="small" className={classes.button} variant="contained" color="primary" onClick={ event => { Router.push('/reservas/[id]', `/reservas/5`) }}>Solicitar Disponibilidad</Button>
                   </div>
                 </div>
               </div>
@@ -269,11 +269,11 @@ class Index extends Component {
                 HOTEL
               </Typography>
               <Typography component="p" variant="subtitle1" color="primary">
-                MAYABELL es un hotel y spa ubicado en Palenque, Chiapas. Ideal
-                para consentirte en la alberca o jacuzzis, un agradable descanso
-                en cualquiera de nuestras habitaciones de lujo, un masaje o
+                MAYABELL es un hotel y SPA ubicado en Palenque, Chiapas. Ideal
+                para consentirte en la alberca, un agradable descanso
+                en cualquiera de nuestras Confortables habitaciones, un masaje o
                 buena comida en su restaurante exclusivo de comida
-                internacional.
+                tradicional e internacional.
               </Typography>
             </Paper>
           </Grid>

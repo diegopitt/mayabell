@@ -86,7 +86,7 @@ class Tours extends Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={2}>
               <Typography component="p" variant="h6" color="secondary" gutterBottom>
-              COCINA TRADICIONAL
+              Cocina tradicional
               </Typography>
               <Slider {...config}>
                 <div>
@@ -122,7 +122,7 @@ class Tours extends Component {
           <Grid item xs={12} md={6}>
             <Paper className={classes.paperBeige} elevation={2}>
               <Typography component="p" variant="h6" color="secondary" gutterBottom>
-              DESAYUNOS
+              Desayunos
               </Typography>
               <Slider {...config}>
                 <div>
