@@ -96,10 +96,10 @@ const styles = theme => ({
   paperBeige: {
     backgroundColor: '#f4f2db',
     [theme.breakpoints.up('xs')]: {
-      padding: theme.spacing(5, 1),
+      padding: theme.spacing(1, 1),
     },
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(4, 1),
+      padding: theme.spacing(2, 1),
     },
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(5, 2),
