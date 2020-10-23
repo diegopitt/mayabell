@@ -2,7 +2,7 @@ const sgMail = require('@sendgrid/mail')
 
 export default async function(req, res) {
   sgMail.setApiKey(process.env.SGkey)
-  const { name, checkin, checkout, nights,email, message, adults, children, roomType} = req.body.data
+  const { name, checkin, checkout, nights,email, message, adults, children, roomType, phone} = req.body.data
   console.log(req.body.data)
   const content = {
     "from":{
@@ -13,7 +13,7 @@ export default async function(req, res) {
       {
          "to":[
             {
-              "email":"diego.pittaluga@gmail.com"
+              "email":"mayabellpalenque@gmail.com"
             }
          ],
          "dynamic_template_data":{
@@ -26,7 +26,8 @@ export default async function(req, res) {
             "checkin":checkin,
             "checkout":checkout,
             "nights":nights,
-            "message":message
+            "message":message,
+            "phone":phone
           }
       }
    ],

@@ -28,7 +28,7 @@ const styles = theme => ({
     borderRadius: "0px",
     backgroundColor: "inherit",
     [theme.breakpoints.up("xs")]: {
-      padding: "4px 24px"
+      padding: "4px 8px"
     },
     [theme.breakpoints.up("sm")]: {
       padding: "8px 4px"
