@@ -80,8 +80,8 @@ class Index extends Component {
                   Relajante
                 </Typography>
                 <Typography gutterBottom component="p" variant="body2" color='secondary'>
-                  Elimina el mal de fatiga mental. Ademas podra descansar durante toda la noche y al dia siguiente sentira un cambio fisico.<br/>
-                  <b>Precio: $300 ~ 30 min</b>
+                  Elimina el mal de fatiga mental. Además, podrá descansar durante toda la noche y al día siguiente sentirá un cambio físico.<br/>
+                  <b>Precio: $400 ~ 30 min</b>
                 </Typography>
               </Paper>
               <Paper className={classes.paperBeige} elevation={0}>
@@ -89,8 +89,8 @@ class Index extends Component {
                   Reflexologia
                 </Typography>
                 <Typography gutterBottom component="p" variant="body2" color='secondary'>
-                  Por medio de los pies nos conectamos con todo el cuerpo activando o desactivando los puntos de acuerdo al comportamiento de las terminaciones nerviosas. <br/>
-                  <b>Precio: $300 ~ 30 min</b>
+                  Por medio de los pies nos conectamos con todo el cuerpo activando o desactivando los puntos de acuerdo al comportamiento de las terminaciones nerviosas.<br/>
+                  <b>Precio: $400 ~ 30 min</b>
                 </Typography>
               </Paper>
               <Paper className={classes.paperBeige} elevation={0}>
@@ -98,8 +98,8 @@ class Index extends Component {
                   Antiestress
                 </Typography>
                 <Typography gutterBottom component="p" variant="body2" color='secondary'>
-                  Ideal para quitar el estress, bajar de talla, quitar nudos y descansar tranquilamente.<br/>
-                  <b>Precio: $400 ~ 50 min</b>
+                  Ideal para quitar el estrés, bajar de talla, quitar nudos y descansar tranquilamente..<br/>
+                  <b>Precio: $500 ~ 45 min</b>
                 </Typography>
               </Paper>
               <Paper className={classes.paperBeige} elevation={0}>
@@ -107,8 +107,8 @@ class Index extends Component {
                   VIP
                 </Typography>
                 <Typography gutterBottom component="p" variant="body2" color='secondary'>
-                  Relajante completo restituye la vitalidad dando sensacion de bienestar. Acompañado de un masaje facial.<br/>
-                  <b>Precio: $500 ~ 1 hora</b>
+                  Relajante completo restituye la vitalidad dando sensación de bienestar. Acompañado de un masaje facial.<br/>
+                  <b>Precio: $600 ~ 1 hora</b>
                 </Typography>
               </Paper>
               <Paper className={classes.paperBeige} elevation={0}>
